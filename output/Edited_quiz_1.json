@@ -1,0 +1,1360 @@
+[
+  {
+    "_id": 32,
+    "question": "32 A company has a financial application that produces reports. The reports average 50 KB in size and are stored in Amazon S3. The reports are frequently accessed during the first week after production and must be stored for several years. The reports must be retrievable within 6 hours. Which solution meets these requirements MOST cost-effectively?",
+    "options": [
+      "A. Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Glacier after 7 days.",
+      "B. Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Standard-Infrequent Access (S3 Standard-IA) after 7 days.",
+      "C. Use S3 Intelligent-Tiering. Configure S3 Intelligent-Tiering to transition the reports to S3 Standard- Infrequent Access (S3 Standard-IA) and S3 Glacier.",
+      "D. Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Glacier Deep Archive after 7 days."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/s3/storage-classes/"
+    ]
+  },
+  {
+    "_id": 31,
+    "question": "31 A company needs to optimize the cost of its Amazon EC2 instances. The company also needs to change the type and family of its EC2 instances every 2-3 months. What should the company do to meet these requirements?",
+    "options": [
+      "A. Purchase Partial Upfront Reserved Instances for a 3-year term.",
+      "B. Purchase a No Upfront Compute Savings Plan for a 1-year term.",
+      "C. Purchase All Upfront Reserved Instances for a 1-year term.",
+      "D. Purchase an All Upfront EC2 Instance Savings Plan for a 1-year term."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/",
+      "https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/reserved-",
+      "https://aws.amazon.com/savingsplans/compute-pricing/"
+    ]
+  },
+  {
+    "_id": 30,
+    "question": "30 A solutions architect needs to review a company's Amazon S3 buckets to discover personally identifiable information (PII). The company stores the PII data in the us-east-1 Region and us-west-2 Region. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Configure Amazon Macie in each Region. Create a job to analyze the data that is in Amazon S3.",
+      "B. Configure AWS Security Hub for all Regions. Create an AWS Config rule to analyze the data that is in Amazon S3.",
+      "C. Configure Amazon Inspector to analyze the data that is in Amazon S3.",
+      "D. Configure Amazon GuardDuty to analyze the data that is in Amazon S3."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/security-hub/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248451812047&usg=AOvVaw0ysEfbvPtFohWdD9Lvg2_I",
+      "https://www.google.com/url?q=https://aws.amazon.com/s3/storage-classes/&sa=D&source=apps-viewer-frontend&ust=1720248451812093&usg=AOvVaw3hr4qHReL-_rEXOnIeeaf7",
+      "https://aws.amazon.com/s3/storage-classes/",
+      "https://www.google.com/url?q=https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/&sa=D&source=apps-viewer-frontend&ust=1720248451812108&usg=AOvVaw1glChmnTungJrQtYGo6ng6",
+      "https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/reserved-instances-payment-options.html&sa=D&source=apps-viewer-frontend&ust=1720248451812123&usg=AOvVaw35S9Xjtq8CyQnGsHZpEcX3",
+      "https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/reserved-instances-payment-options.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/savingsplans/compute-pricing/&sa=D&source=apps-viewer-frontend&ust=1720248451812137&usg=AOvVaw2tVSNrcunYHaJpiV1XKuTF",
+      "https://aws.amazon.com/savingsplans/compute-pricing/",
+      "https://www.google.com/url?q=https://aws.amazon.com/security-hub/&sa=D&source=apps-viewer-frontend&ust=1720248451812149&usg=AOvVaw1kcF51WBhzFeUgkgPGjuvD",
+      "https://aws.amazon.com/security-hub/",
+      "https://aws.amazon.com/inspector/",
+      "https://aws.amazon.com/guardduty/",
+      "https://aws.amazon.com/macie/features/"
+    ]
+  },
+  {
+    "_id": 29,
+    "question": "29 A company's SAP application has a backend SQL Server database in an on-premises environment. The company wants to migrate its on-premises application and database server to AWS. The company needs an instance type that meets the high demands of its SAP database. On-premises performance data shows that both the SAP application and the database have high memory utilization. Which solution will meet these requirements?",
+    "options": [
+      "A. Use the compute optimized instance family for the application. Use the memory optimized instance family for the database.",
+      "B. Use the storage optimized instance family for both the application and the database.",
+      "C. Use the memory optimized instance family for both the application and the database.",
+      "D. Use the high performance computing (HPC) optimized instance family for the application. Use the memory optimized instance family for the database."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/memory-optimized-instances.html"
+    ]
+  },
+  {
+    "_id": 28,
+    "question": "28 A company runs an application in a VPC with public and private subnets. The VPC extends across multiple Availability Zones. The application runs on Amazon EC2 instances in private subnets. The application uses an Amazon Simple Queue Service (Amazon SQS) queue. A solutions architect needs to design a secure solution to establish a connection between the EC2 instances and the SQS queue. Which solution will meet these requirements?",
+    "options": [
+      "A. Implement an interface VPC endpoint for Amazon SQS. Configure the endpoint to use the private subnets. Add to the endpoint a security group that has an inbound access rule that allows traffic from the EC2 instances that are in the private subnets.\nB. Implement an interface VPC endpoint for Amazon SQS. Configure the endpoint to use the public subnets. Attach to the interface endpoint a VPC endpoint policy that allows access from the EC2 instances that are in the private subnets.\nC. Implement an interface VPC endpoint for Amazon SQS. Configure the endpoint to use the public subnets. Attach an Amazon SQS access policy to the interface VPC endpoint that allows requests from only a specified VPC endpoint.\nD. Implement a gateway endpoint for Amazon SQS. Add a NAT gateway to the private subnets. Attach an IAM role to the EC2 instances that allows access to the SQS queue."
+    ],
+    "explain": "B,C: 'Configuring endpoints to use public subnets' --> Invalid D: No Gateway Endpoint for SQS.",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/vpc/latest/privatelink/interface-endpoints.html#add-remove-subnets"
+    ]
+  },
+  {
+    "_id": 27,
+    "question": "27 A solutions architect is using an AWS CloudFormation template to deploy a three-tier web application. The web application consists of a web tier and an application tier that stores and retrieves user data in Amazon DynamoDB tables. The web and application tiers are hosted on Amazon EC2 instances, and the database tier is not publicly accessible. The application EC2 instances need to access the DynamoDB https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248452800916&usg=AOvVaw2w_lJ3bbeALiJtltUsxf6m https://www.google.com/url?q=https://aws.amazon.com/inspector/&sa=D&source=apps-viewer-frontend&ust=1720248452800972&usg=AOvVaw13ubVfcFOZRrdLtpqeDL7S https://aws.amazon.com/inspector/ https://www.google.com/url?q=https://aws.amazon.com/guardduty/&sa=D&source=apps-viewer-frontend&ust=1720248452800982&usg=AOvVaw3vA4iQoyt-ePiC3jeCxsaY https://aws.amazon.com/guardduty/ https://www.google.com/url?q=https://aws.amazon.com/macie/features/&sa=D&source=apps-viewer-frontend&ust=1720248452800990&usg=AOvVaw2MW2mNpLXDy6v8yc69HflC https://aws.amazon.com/macie/features/ https://www.google.com/url?q=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/memory-optimized-instances.html&sa=D&source=apps-viewer-frontend&ust=1720248452801000&usg=AOvVaw1xazTr4sJ5Dspc6gnmvB_l https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/memory-optimized-instances.html https://www.google.com/url?q=https://docs.aws.amazon.com/vpc/latest/privatelink/interface-endpoints.html%23add-remove-subnets&sa=D&source=apps-viewer-frontend&ust=1720248452801010&usg=AOvVaw2fIy-Lg9X0snJUpQf-WiW4 https://docs.aws.amazon.com/vpc/latest/privatelink/interface-endpoints.html#add-remove-subnets 3 tables without exposing API credentials in the template. What should the solutions architect do to meet these requirements?",
+    "options": [
+      "A. Create an IAM role to read the DynamoDB tables. Associate the role with the application instances by referencing an instance profile.",
+      "B. Create an IAM role that has the required permissions to read and write from the DynamoDB tables. Add the role to the EC2 instance profile, and associate the instance profile with the application instances.",
+      "C. Use the parameter section in the AWS CloudFormation template to have the user input access and secret keys from an already-created IAM user that has the required permissions to read and write from the DynamoDB tables.",
+      "D. Create an IAM user in the AWS CloudFormation template that has the required permissions to read and write from the DynamoDB tables. Use the GetAtt function to retrieve the access and secret keys, and pass them to the application instances through the user data."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248452800916&usg=AOvVaw2w_lJ3bbeALiJtltUsxf6m",
+      "https://www.google.com/url?q=https://aws.amazon.com/inspector/&sa=D&source=apps-viewer-frontend&ust=1720248452800972&usg=AOvVaw13ubVfcFOZRrdLtpqeDL7S",
+      "https://aws.amazon.com/inspector/",
+      "https://www.google.com/url?q=https://aws.amazon.com/guardduty/&sa=D&source=apps-viewer-frontend&ust=1720248452800982&usg=AOvVaw3vA4iQoyt-ePiC3jeCxsaY",
+      "https://aws.amazon.com/guardduty/",
+      "https://www.google.com/url?q=https://aws.amazon.com/macie/features/&sa=D&source=apps-viewer-frontend&ust=1720248452800990&usg=AOvVaw2MW2mNpLXDy6v8yc69HflC",
+      "https://aws.amazon.com/macie/features/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/memory-optimized-instances.html&sa=D&source=apps-viewer-frontend&ust=1720248452801000&usg=AOvVaw1xazTr4sJ5Dspc6gnmvB_l",
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/memory-optimized-instances.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/vpc/latest/privatelink/interface-endpoints.html%23add-remove-subnets&sa=D&source=apps-viewer-frontend&ust=1720248452801010&usg=AOvVaw2fIy-Lg9X0snJUpQf-WiW4",
+      "https://docs.aws.amazon.com/vpc/latest/privatelink/interface-endpoints.html#add-remove-subnets",
+      "https://aws.amazon.com/cloudformation/",
+      "https://aws.amazon.com/dynamodb/"
+    ]
+  },
+  {
+    "_id": 26,
+    "question": "26 A solutions architect manages an analytics application. The application stores large amounts of semi structured data in an Amazon S3 bucket. The solutions architect wants to use parallel data processing to process the data more quickly. The solutions architect also wants to use information that is stored in an Amazon Redshift database to enrich the data. Which solution will meet these requirements?",
+    "options": [
+      "A. Use Amazon Athena to process the S3 data. Use AWS Glue with the Amazon Redshift data to enrich the S3 data.",
+      "B. Use Amazon EMR to process the S3 data. Use Amazon EMR with the Amazon Redshift data to enrich the S3 data.",
+      "C. Use Amazon EMR to process the S3 data. Use Amazon Kinesis Data Streams to move the S3 data into Amazon Redshift so that the data can be enriched.",
+      "D. Use AWS Glue to process the S3 data. Use AWS Lake Formation with the Amazon Redshift data to enrich the S3 data."
+    ],
+    "explain": "",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://aws.amazon.com/emr/",
+      "https://aws.amazon.com/redshift/",
+      "https://aws.amazon.com/kinesis/data-streams/",
+      "https://aws.amazon.com/blogs/big-data/streaming-data-from-amazon-s3-to-amazon-kinesis-data-",
+      "https://aws.amazon.com/lake-formation/",
+      "https://aws.amazon.com/blogs/architecture/reduce-archive-cost-with-serverless-data-archiving/",
+      "https://docs.aws.amazon.com/lake-formation/latest/dg/tut-query-redshift.html",
+      "https://aws.amazon.com/glue/"
+    ]
+  },
+  {
+    "_id": 25,
+    "question": "25 A company has two VPCs that are located in the us-west-2 Region within the same AWS account. The company needs to allow network traffic between these VPCs. Approximately 500 GB of data transfer will occur between the VPCs each month. https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248453484805&usg=AOvVaw1rVj8zfqfkqXCAIrrYdzSj https://www.google.com/url?q=https://aws.amazon.com/cloudformation/&sa=D&source=apps-viewer-frontend&ust=1720248453484848&usg=AOvVaw0gvXdBEz2BwL6nyrM5lnIe https://aws.amazon.com/cloudformation/ https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248453484856&usg=AOvVaw1CCSU0ab54G-xQntoqHAPi https://aws.amazon.com/dynamodb/ https://www.google.com/url?q=https://aws.amazon.com/emr/&sa=D&source=apps-viewer-frontend&ust=1720248453484865&usg=AOvVaw2BNBxX700stDRed2VAhlMn https://aws.amazon.com/emr/ https://www.google.com/url?q=https://aws.amazon.com/redshift/&sa=D&source=apps-viewer-frontend&ust=1720248453484873&usg=AOvVaw3ay4pkX_orskniEdk9OBD4 https://aws.amazon.com/redshift/ https://www.google.com/url?q=https://aws.amazon.com/kinesis/data-streams/&sa=D&source=apps-viewer-frontend&ust=1720248453484879&usg=AOvVaw3Pq6SRx6fYvCU8TSgaLNkW https://aws.amazon.com/kinesis/data-streams/ https://www.google.com/url?q=https://aws.amazon.com/blogs/big-data/streaming-data-from-amazon-s3-to-amazon-kinesis-data-streams-using-aws-dms/&sa=D&source=apps-viewer-frontend&ust=1720248453484886&usg=AOvVaw0_qy5n1T6u88TTsqK8YJMf https://aws.amazon.com/blogs/big-data/streaming-data-from-amazon-s3-to-amazon-kinesis-data-streams-using-aws-dms/ https://www.google.com/url?q=https://aws.amazon.com/lake-formation/&sa=D&source=apps-viewer-frontend&ust=1720248453484893&usg=AOvVaw28e5dxK1R5XGU4IlE3X0E7 https://aws.amazon.com/lake-formation/ https://www.google.com/url?q=https://aws.amazon.com/blogs/architecture/reduce-archive-cost-with-serverless-data-archiving/&sa=D&source=apps-viewer-frontend&ust=1720248453484899&usg=AOvVaw0cchbvH6Z6ZUGUbGnOEZGE https://aws.amazon.com/blogs/architecture/reduce-archive-cost-with-serverless-data-archiving/ https://www.google.com/url?q=https://docs.aws.amazon.com/lake-formation/latest/dg/tut-query-redshift.html&sa=D&source=apps-viewer-frontend&ust=1720248453484908&usg=AOvVaw3gQ5C0zmCDoEnwXK-hWBRM https://docs.aws.amazon.com/lake-formation/latest/dg/tut-query-redshift.html https://www.google.com/url?q=https://aws.amazon.com/glue/&sa=D&source=apps-viewer-frontend&ust=1720248453484914&usg=AOvVaw1kKFTUAZULTL21kVTPfCJI https://aws.amazon.com/glue/ 4 What is the MOST cost-effective solution to connect these VPCs?",
+    "options": [
+      "A. Implement AWS Transit Gateway to connect the VPCs. Update the route tables of each VPC to use the transit gateway for inter-VPC communication.",
+      "B. Implement an AWS Site-to-Site VPN tunnel between the VPCs. Update the route tables of each VPC to use the VPN tunnel for inter-VPC communication.",
+      "C. Set up a VPC peering connection between the VPCs. Update the route tables of each VPC to use the VPC peering connection for inter-VPC communication.",
+      "D. Set up a 1 GB AWS Direct Connect connection between the VPCs. Update the route tables of each VPC to use the Direct Connect connection for inter-VPC communication."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248453484805&usg=AOvVaw1rVj8zfqfkqXCAIrrYdzSj",
+      "https://www.google.com/url?q=https://aws.amazon.com/cloudformation/&sa=D&source=apps-viewer-frontend&ust=1720248453484848&usg=AOvVaw0gvXdBEz2BwL6nyrM5lnIe",
+      "https://aws.amazon.com/cloudformation/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248453484856&usg=AOvVaw1CCSU0ab54G-xQntoqHAPi",
+      "https://aws.amazon.com/dynamodb/",
+      "https://www.google.com/url?q=https://aws.amazon.com/emr/&sa=D&source=apps-viewer-frontend&ust=1720248453484865&usg=AOvVaw2BNBxX700stDRed2VAhlMn",
+      "https://aws.amazon.com/emr/",
+      "https://www.google.com/url?q=https://aws.amazon.com/redshift/&sa=D&source=apps-viewer-frontend&ust=1720248453484873&usg=AOvVaw3ay4pkX_orskniEdk9OBD4",
+      "https://aws.amazon.com/redshift/",
+      "https://www.google.com/url?q=https://aws.amazon.com/kinesis/data-streams/&sa=D&source=apps-viewer-frontend&ust=1720248453484879&usg=AOvVaw3Pq6SRx6fYvCU8TSgaLNkW",
+      "https://aws.amazon.com/kinesis/data-streams/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/big-data/streaming-data-from-amazon-s3-to-amazon-kinesis-data-streams-using-aws-dms/&sa=D&source=apps-viewer-frontend&ust=1720248453484886&usg=AOvVaw0_qy5n1T6u88TTsqK8YJMf",
+      "https://aws.amazon.com/blogs/big-data/streaming-data-from-amazon-s3-to-amazon-kinesis-data-streams-using-aws-dms/",
+      "https://www.google.com/url?q=https://aws.amazon.com/lake-formation/&sa=D&source=apps-viewer-frontend&ust=1720248453484893&usg=AOvVaw28e5dxK1R5XGU4IlE3X0E7",
+      "https://aws.amazon.com/lake-formation/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/architecture/reduce-archive-cost-with-serverless-data-archiving/&sa=D&source=apps-viewer-frontend&ust=1720248453484899&usg=AOvVaw0cchbvH6Z6ZUGUbGnOEZGE",
+      "https://aws.amazon.com/blogs/architecture/reduce-archive-cost-with-serverless-data-archiving/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/lake-formation/latest/dg/tut-query-redshift.html&sa=D&source=apps-viewer-frontend&ust=1720248453484908&usg=AOvVaw3gQ5C0zmCDoEnwXK-hWBRM",
+      "https://docs.aws.amazon.com/lake-formation/latest/dg/tut-query-redshift.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/glue/&sa=D&source=apps-viewer-frontend&ust=1720248453484914&usg=AOvVaw1kKFTUAZULTL21kVTPfCJI",
+      "https://aws.amazon.com/glue/",
+      "https://aws.amazon.com/transit-gateway/",
+      "https://aws.amazon.com/vpn/site-to-site-vpn/",
+      "https://aws.amazon.com/directconnect/",
+      "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html"
+    ]
+  },
+  {
+    "_id": 24,
+    "question": "24 A company hosts multiple applications on AWS for different product lines. The applications use different compute resources, including Amazon EC2 instances and Application Load Balancers. The applications run in different AWS accounts under the same organization in AWS Organizations across multiple AWS Regions. Teams for each product line have tagged each compute resource in the individual accounts. The company wants more details about the cost for each product line from the consolidated billing feature in Organizations. Which combination of steps will meet these requirements? (Choose two.)",
+    "options": [
+      "A. Select a specific AWS generated tag in the AWS Billing console.",
+      "B. Select a specific user-defined tag in the AWS Billing console.",
+      "C. Select a specific user-defined tag in the AWS Resource Groups console.",
+      "D. Activate the selected tag from each AWS account.",
+      "E. Activate the selected tag from the Organizations management account."
+    ],
+    "explain": "",
+    "answers": [
+      "2",
+      "5"
+    ],
+    "resources": [
+      "https://aws.amazon.com/aws-cost-management/aws-billing/",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html",
+      "https://docs.aws.amazon.com/ARG/latest/userguide/resource-groups.html",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248454176317&usg=AOvVaw2nbcyFcKdns7fxePIO1nWY",
+      "https://www.google.com/url?q=https://aws.amazon.com/transit-gateway/&sa=D&source=apps-viewer-frontend&ust=1720248454176355&usg=AOvVaw2svzNYwF3EBL3wkJTIcoA1",
+      "https://aws.amazon.com/transit-gateway/",
+      "https://www.google.com/url?q=https://aws.amazon.com/vpn/site-to-site-vpn/&sa=D&source=apps-viewer-frontend&ust=1720248454176368&usg=AOvVaw2KDSES71jNp6XVpJo85vQM",
+      "https://aws.amazon.com/vpn/site-to-site-vpn/",
+      "https://www.google.com/url?q=https://aws.amazon.com/directconnect/&sa=D&source=apps-viewer-frontend&ust=1720248454176386&usg=AOvVaw39woggRqIY3quH5VA8YLON",
+      "https://aws.amazon.com/directconnect/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html&sa=D&source=apps-viewer-frontend&ust=1720248454176398&usg=AOvVaw095onnaWnO6XwxmM6qGeSg",
+      "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/aws-cost-management/aws-billing/&sa=D&source=apps-viewer-frontend&ust=1720248454176409&usg=AOvVaw0Sf8SbqhZJEOtiOsV74gri",
+      "https://aws.amazon.com/aws-cost-management/aws-billing/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&sa=D&source=apps-viewer-frontend&ust=1720248454176423&usg=AOvVaw2z-Hr29F4mcKYrkSRjbz5V",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html&sa=D&source=apps-viewer-frontend&ust=1720248454176437&usg=AOvVaw0KFGUJdsk6kN3ZT9yxYBUY",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/ARG/latest/userguide/resource-groups.html&sa=D&source=apps-viewer-frontend&ust=1720248454176449&usg=AOvVaw3AyaQJHQRYNi19ARKUjDA-",
+      "https://docs.aws.amazon.com/ARG/latest/userguide/resource-groups.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html&sa=D&source=apps-viewer-frontend&ust=1720248454176463&usg=AOvVaw1h3oIP8QQ2_UsUi8cWzVK5",
+      "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html"
+    ]
+  },
+  {
+    "_id": "23",
+    "question": "23 A company receives data from millions of users totaling about 1TB each day. The company provides its users with usage reports going back 12 months. All usage data must be stored for at least 5 years to comply with regulatory and auditing requirements. Which storage solution is MOST cost-effective?",
+    "options": [
+      "A. Store the data in Amazon S3 Standard. Set a lifecycle rule to transition the data to S3 Glacier Deep Archive after 1 year. Set a lifecycle rule to delete the data after 5 years.",
+      "B. Store the data in Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA). Set a lifecycle rule to transition the data to S3 Glacier after 1 year. Set the lifecycle rule to delete the data after 5 years.",
+      "C. Store the data in Amazon S3 Standard. Set a lifecycle rule to transition the data to S3 Standard- Infrequent Access (S3 Standard-IA) after 1 year. Set a lifecycle rule to delete the data after 5 years.",
+      "D. Store the data in Amazon S3 Standard. Set a lifecycle rule to transition the data to S3 One Zone- Infrequent Access (S3 One Zone-IA) after 1 year. Set a lifecycle rule to delete the data after 5 years."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/s3/storage-classes/"
+    ]
+  },
+  {
+    "_id": 22,
+    "question": "A company's website handles millions of requests each day, and the number of requests continues to increase. A solutions architect needs to improve the response time of the web application. The solutions architect determines that the application needs to decrease latency when retrieving product details from the Amazon DynamoDB table. Which solution will meet these requirements with the LEAST amount of operational overhead?",
+    "options": [
+      "A. Set up a DynamoDB Accelerator (DAX) cluster. Route all read requests through DAX.",
+      "B. Set up Amazon ElastiCache for Redis between the DynamoDB table and the web application. Route all read requests through Redis.",
+      "C. Set up Amazon ElastiCache for Memcached between the DynamoDB table and the web application. Route all read requests through Memcached.",
+      "D. Set up Amazon DynamoDB Streams on the table, and have AWS Lambda read from the table and populate Amazon ElastiCache. Route all read requests through ElastiCache."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/elasticache/",
+      "https://aws.amazon.com/dynamodb/",
+      "https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patterns/",
+      "https://aws.amazon.com/dynamodb/dax/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248454953298&usg=AOvVaw2RDXLiQkJL4IXAdV2aovd_",
+      "https://www.google.com/url?q=https://aws.amazon.com/s3/storage-classes/&sa=D&source=apps-viewer-frontend&ust=1720248454953330&usg=AOvVaw0Tx96wVYgt5l_dNueMJsyS",
+      "https://aws.amazon.com/s3/storage-classes/",
+      "https://www.google.com/url?q=https://aws.amazon.com/elasticache/&sa=D&source=apps-viewer-frontend&ust=1720248454953339&usg=AOvVaw2-4g43KNuFalLnGtCqWS-D",
+      "https://aws.amazon.com/elasticache/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248454953346&usg=AOvVaw1Uvg7jzJoW0y5aG7pC3wOt",
+      "https://aws.amazon.com/dynamodb/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patterns/&sa=D&source=apps-viewer-frontend&ust=1720248454953353&usg=AOvVaw07lhJaCLg9MiNRGleL_TO3",
+      "https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patterns/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/dax/&sa=D&source=apps-viewer-frontend&ust=1720248454953361&usg=AOvVaw3rD3yQTWGPE1AcZSAE5Ju8",
+      "https://aws.amazon.com/dynamodb/dax/"
+    ]
+  },
+  {
+    "_id": "21",
+    "question": "A solutions architect needs to ensure that API calls to Amazon DynamoDB from Amazon EC2 instances in a VPC do not travel across the internet. Which combination of steps should the solutions architect take to meet this requirement? (Choose two.)",
+    "options": [
+      "A. Create a route table entry for the endpoint.",
+      "B. Create a gateway endpoint for DynamoDB.",
+      "C. Create an interface endpoint for Amazon EC2.",
+      "D. Create an elastic network interface for the endpoint in each of the subnets of the VPC.",
+      "E. Create a security group entry in the endpoint's security group to provide access."
+    ],
+    "explain": "",
+    "answers": [
+      "1",
+      "2"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html",
+      "https://aws.amazon.com/privatelink/features/",
+      "https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html"
+    ]
+  },
+  {
+    "_id": 20,
+    "question": "A company runs its applications on both Amazon Elastic Kubernetes Service (Amazon EKS) clusters and on-premises Kubernetes clusters. The company wants to view all clusters and workloads from a central location. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Use Amazon CloudWatch Container Insights to collect and group the cluster information.",
+      "B. Use Amazon EKS Connector to register and connect all Kubernetes clusters.",
+      "C. Use AWS Systems Manager to collect and view the cluster information.",
+      "D. Use Amazon EKS Anywhere as the primary cluster to view the other clusters with native Kubernetes commands."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html",
+      "https://docs.aws.amazon.com/systems-manager/latest/userguide/application-manager-working-",
+      "https://aws.amazon.com/eks/"
+    ]
+  },
+  {
+    "_id": 19,
+    "question": "19 A company is building an ecommerce application and needs to store sensitive customer information. The company needs to give customers the ability to complete purchase transactions on the website. The company also needs to ensure that sensitive customer data is protected, even from database administrators. Which solution meets these requirements?",
+    "options": [
+      "A. Store sensitive data in an Amazon Elastic Block Store (Amazon EBS) volume. Use EBS encryption to encrypt the data. Use an IAM instance role to restrict access.",
+      "B. Store sensitive data in Amazon RDS for MySQL. Use AWS Key Management Service (AWS KMS) client-side encryption to encrypt the data.",
+      "C. Store sensitive data in Amazon S3. Use AWS Key Management Service (AWS KMS) server-side encryption to encrypt the data. Use S3 bucket policies to restrict access.",
+      "D. Store sensitive data in Amazon FSx for Windows Server. Mount the file share on application servers. Use Windows file permissions to restrict access."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://aws.amazon.com/ebs/features/",
+      "https://aws.amazon.com/s3/security/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248455661531&usg=AOvVaw06JmLSLl8h02blAsQUG99k",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html&sa=D&source=apps-viewer-frontend&ust=1720248455661579&usg=AOvVaw0tIrXZBBkvXHvYG_pLSarp",
+      "https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/privatelink/features/&sa=D&source=apps-viewer-frontend&ust=1720248455661592&usg=AOvVaw3GaNVOyV24R6_uGIaoUGyE",
+      "https://aws.amazon.com/privatelink/features/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html&sa=D&source=apps-viewer-frontend&ust=1720248455661603&usg=AOvVaw1wrE7V-g3anlRL0C2qrh8A",
+      "https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html&sa=D&source=apps-viewer-frontend&ust=1720248455661615&usg=AOvVaw1f-Bqws6FMZz8JBmN99NVF",
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/systems-manager/latest/userguide/application-manager-working-EKS.html&sa=D&source=apps-viewer-frontend&ust=1720248455661625&usg=AOvVaw20SAYWyjk0RR2k40kzWB1E",
+      "https://docs.aws.amazon.com/systems-manager/latest/userguide/application-manager-working-EKS.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/eks/&sa=D&source=apps-viewer-frontend&ust=1720248455661636&usg=AOvVaw15qz9dVJkYyoOdfoPy32Hw",
+      "https://aws.amazon.com/eks/",
+      "https://www.google.com/url?q=https://aws.amazon.com/ebs/features/&sa=D&source=apps-viewer-frontend&ust=1720248455661645&usg=AOvVaw0vStdMjdYoUN7Z94Ou6Gml",
+      "https://aws.amazon.com/ebs/features/",
+      "https://www.google.com/url?q=https://aws.amazon.com/s3/security/&sa=D&source=apps-viewer-frontend&ust=1720248455661655&usg=AOvVaw3Ov5HPAqZ0wqkvYXISzrl1",
+      "https://aws.amazon.com/s3/security/",
+      "https://aws.amazon.com/fsx/windows/",
+      "https://aws.amazon.com/blogs/database/performing-sql-database-client-side-encryption-for-multi-"
+    ]
+  },
+  {
+    "_id": 18,
+    "question": "18 A company has an on-premises MySQL database that handles transactional data. The company is migrating the database to the AWS Cloud. The migrated database must maintain compatibility with the company's applications that use the database. The migrated database also must scale automatically during periods of increased demand. Which migration solution will meet these requirements?",
+    "options": [
+      "A. Use native MySQL tools to migrate the database to Amazon RDS for MySQL. Configure elastic storage scaling.",
+      "B. Migrate the database to Amazon Redshift by using the mysqldump utility. Turn on Auto Scaling for the Amazon Redshift cluster.",
+      "C. Use AWS Database Migration Service (AWS DMS) to migrate the database to Amazon Aurora. Turn on Aurora Auto Scaling.",
+      "D. Use AWS Database Migration Service (AWS DMS) to migrate the database to Amazon DynamoDB. Configure an Auto Scaling policy."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/",
+      "https://aws.amazon.com/redshift/",
+      "https://aws.amazon.com/blogs/big-data/scale-your-amazon-redshift-clusters-up-and-down-in-minutes-",
+      "https://aws.amazon.com/dms/",
+      "https://aws.amazon.com/dynamodb/",
+      "https://aws.amazon.com/blogs/database/amazon-dynamodb-auto-scaling-performance-and-cost-",
+      "https://aws.amazon.com/rds/aurora/"
+    ]
+  },
+  {
+    "_id": 17,
+    "question": "17 A company runs multiple Amazon EC2 Linux instances in a VPC across two Availability Zones. The instances host applications that use a hierarchical directory structure. The applications need to read and write rapidly and concurrently to shared storage. What should a solutions architect do to meet these requirements?",
+    "options": [
+      "A. Create an Amazon S3 bucket. Allow access from all the EC2 instances in the VPC.",
+      "B. Create an Amazon Elastic File System (Amazon EFS) file system. Mount the EFS file system from each EC2 instance.",
+      "C. Create a file system on a Provisioned IOPS SSD (io2) Amazon Elastic Block Store (Amazon EBS) volume. Attach the EBS volume to all the EC2 instances.",
+      "D. Create file systems on Amazon Elastic Block Store (Amazon EBS) volumes that are attached to each EC2 instance. Synchronize the EBS volumes across the different EC2 instances."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248456249360&usg=AOvVaw0LGe-81JixSJsaUA-lSMm-",
+      "https://www.google.com/url?q=https://aws.amazon.com/fsx/windows/&sa=D&source=apps-viewer-frontend&ust=1720248456249404&usg=AOvVaw2NQ6prVTrSfSoYFMrcUNy3",
+      "https://aws.amazon.com/fsx/windows/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/database/performing-sql-database-client-side-encryption-for-multi-region-high-availability/&sa=D&source=apps-viewer-frontend&ust=1720248456249412&usg=AOvVaw0djs_pfYHzRCMEPhiv1tAm",
+      "https://aws.amazon.com/blogs/database/performing-sql-database-client-side-encryption-for-multi-region-high-availability/",
+      "https://www.google.com/url?q=https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/&sa=D&source=apps-viewer-frontend&ust=1720248456249420&usg=AOvVaw1sTCNzIP9xqMynWiIMzGsc",
+      "https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/",
+      "https://www.google.com/url?q=https://aws.amazon.com/redshift/&sa=D&source=apps-viewer-frontend&ust=1720248456249428&usg=AOvVaw3PFiN4-wdkIsLJ3AsWD_RL",
+      "https://aws.amazon.com/redshift/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/big-data/scale-your-amazon-redshift-clusters-up-and-down-in-minutes-to-get-the-performance-you-need-when-you-need-it/&sa=D&source=apps-viewer-frontend&ust=1720248456249435&usg=AOvVaw3o3hn0usMrw3CPOAHJTTi3",
+      "https://aws.amazon.com/blogs/big-data/scale-your-amazon-redshift-clusters-up-and-down-in-minutes-to-get-the-performance-you-need-when-you-need-it/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dms/&sa=D&source=apps-viewer-frontend&ust=1720248456249442&usg=AOvVaw0j60A4UqbSa1u9zKWQZAiQ",
+      "https://aws.amazon.com/dms/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248456249449&usg=AOvVaw0fhULirgax_hUIeoSct7s0",
+      "https://aws.amazon.com/dynamodb/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/database/amazon-dynamodb-auto-scaling-performance-and-cost-optimization-at-any-scale/&sa=D&source=apps-viewer-frontend&ust=1720248456249455&usg=AOvVaw0CQgoaXcSWNgeY_FG-SH8o",
+      "https://aws.amazon.com/blogs/database/amazon-dynamodb-auto-scaling-performance-and-cost-optimization-at-any-scale/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/aurora/&sa=D&source=apps-viewer-frontend&ust=1720248456249462&usg=AOvVaw2kQhBsSGr6ERbIr0Wc9gNe",
+      "https://aws.amazon.com/rds/aurora/",
+      "https://aws.amazon.com/ebs/features/",
+      "https://aws.amazon.com/efs/features/"
+    ]
+  },
+  {
+    "_id": 16,
+    "question": "16 A solutions architect is designing a workload that will store hourly energy consumption by business tenants in a building. The sensors will feed a database through HTTP requests that will add up usage for each tenant. The solutions architect must use managed services when possible. The workload will receive more features in the future as the solutions architect adds independent components. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Use Amazon API Gateway with AWS Lambda functions to receive the data from the sensors, process the data, and store the data in an Amazon DynamoDB table.",
+      "B. Use an Elastic Load Balancer that is supported by an Auto Scaling group of Amazon EC2 instances to receive and process the data from the sensors. Use an Amazon S3 bucket to store the processed data.",
+      "C. Use Amazon API Gateway with AWS Lambda functions to receive the data from the sensors, process the data, and store the data in a Microsoft SQL Server Express database on an Amazon EC2 instance.",
+      "D. Use an Elastic Load Balancer that is supported by an Auto Scaling group of Amazon EC2 instances to receive and process the data from the sensors. Use an Amazon Elastic File System (Amazon EFS) shared file system to store the processed data."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/elasticloadbalancing/",
+      "https://aws.amazon.com/api-gateway/",
+      "https://aws.amazon.com/efs/",
+      "https://aws.amazon.com/dynamodb/"
+    ]
+  },
+  {
+    "_id": "14",
+    "question": "An Amazon EventBridge rule targets a third-party API. The third-party API has not received any incoming traffic. A solutions architect needs to determine whether the rule conditions are being met and if the rule's target is being invoked. Which solution will meet these requirements?",
+    "options": [
+      "A. Check for metrics in Amazon CloudWatch in the namespace for AWS/Events.",
+      "B. Review events in the Amazon Simple Queue Service (Amazon SQS) dead-letter queue.",
+      "C. Check for the events in Amazon CloudWatch Logs.",
+      "D. Check the trails in AWS CloudTrail for the EventBridge events."
+    ],
+    "explain": "A is the most appropriate solution because Amazon EventBridge publishes metrics to Amazon CloudWatch. You can find relevant metrics in the \"AWS/Events\" namespace, which allows you to monitor the number of events matched by the rule and the number of invocations to the rule's target.\n",
+    "answers": [
+      1
+    ],
+    "resources": [
+      "https://aws.amazon.com/sqs/\nhttps://aws.amazon.com/cloudwatch/\nhttps://aws.amazon.com/cloudtrail/\nhttps://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatch-Events-Monitoring-CloudWatch-Metrics.html"
+    ]
+  },
+  {
+    "_id": 15,
+    "question": "15 A solutions architect is designing the storage architecture for a new web application used for storing and viewing engineering drawings. All application components will be deployed on the AWS infrastructure. The application design must support caching to minimize the amount of time that users wait for the engineering drawings to load. The application must be able to store petabytes of data. Which combination of storage and caching should the solutions architect use? ",
+    "options": [
+      "A. Amazon S3 with Amazon CloudFront\nB. Amazon S3 Glacier with Amazon ElastiCache\nC. Amazon Elastic Block Store (Amazon EBS) volumes with Amazon CloudFront\nD. AWS Storage Gateway with Amazon ElastiCache"
+    ],
+    "explain": "\n\nThe answer seems A: B : Glacier for archiving C : i dont think EBS scale to petabytes (I am not sure about that) D : it incorrect because All application components will be deployed on the AWS infrastructure",
+    "answers": [
+      1
+    ],
+    "resources": [
+      "https://aws.amazon.com/elasticache/",
+      "https://aws.amazon.com/storagegateway/",
+      "https://aws.amazon.com/ebs/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248456819232&usg=AOvVaw18jq7LsONQX2WHSK23r1Nf",
+      "https://www.google.com/url?q=https://aws.amazon.com/ebs/features/&sa=D&source=apps-viewer-frontend&ust=1720248456819276&usg=AOvVaw0mqEcWi01ZUifRi-0qdpZ8",
+      "https://aws.amazon.com/ebs/features/",
+      "https://www.google.com/url?q=https://aws.amazon.com/efs/features/&sa=D&source=apps-viewer-frontend&ust=1720248456819285&usg=AOvVaw0DWOd4UhmVmLgCty3mEshn",
+      "https://aws.amazon.com/efs/features/",
+      "https://www.google.com/url?q=https://aws.amazon.com/elasticloadbalancing/&sa=D&source=apps-viewer-frontend&ust=1720248456819295&usg=AOvVaw148qC3Ds8JDeIq8tsNUgjw",
+      "https://aws.amazon.com/elasticloadbalancing/",
+      "https://www.google.com/url?q=https://aws.amazon.com/api-gateway/&sa=D&source=apps-viewer-frontend&ust=1720248456819306&usg=AOvVaw1OWjbjHyq12jJWiQNRKvUJ",
+      "https://aws.amazon.com/api-gateway/",
+      "https://www.google.com/url?q=https://aws.amazon.com/efs/&sa=D&source=apps-viewer-frontend&ust=1720248456819315&usg=AOvVaw1PM6amtEVandHTMEZ-4p4M",
+      "https://aws.amazon.com/efs/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248456819322&usg=AOvVaw1DJVQscQXZlMWh8XTLnN_0",
+      "https://aws.amazon.com/dynamodb/",
+      "https://www.google.com/url?q=https://aws.amazon.com/elasticache/&sa=D&source=apps-viewer-frontend&ust=1720248456819330&usg=AOvVaw2cx1QRsbKBdZWnrJvx9WwO",
+      "https://aws.amazon.com/elasticache/",
+      "https://www.google.com/url?q=https://aws.amazon.com/storagegateway/&sa=D&source=apps-viewer-frontend&ust=1720248456819340&usg=AOvVaw0ZmwVFV6tr1613XLoZFfAe",
+      "https://aws.amazon.com/storagegateway/",
+      "https://www.google.com/url?q=https://aws.amazon.com/ebs/&sa=D&source=apps-viewer-frontend&ust=1720248456819348&usg=AOvVaw3hcGjtTfSs0GXJkyupU0eF",
+      "https://aws.amazon.com/ebs/",
+      "https://aws.amazon.com/cloudfront/",
+      "https://aws.amazon.com/sqs/",
+      "https://aws.amazon.com/cloudwatch/",
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html",
+      "https://aws.amazon.com/cloudtrail/",
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatch-Events-Monitoring-"
+    ]
+  },
+  {
+    "_id": 13,
+    "question": "13 A company has a large workload that runs every Friday evening. The workload runs on Amazon EC2 instances that are in two Availability Zones in the us-east-1 Region. Normally, the company must run no more than two instances at all times. However, the company wants to scale up to six instances each Friday to handle a regularly repeating increased workload. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Create a reminder in Amazon EventBridge to scale the instances.",
+      "B. Create an Auto Scaling group that has a scheduled action.",
+      "C. Create an Auto Scaling group that uses manual scaling.",
+      "D. Create an Auto Scaling group that uses automatic scaling."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://aws.amazon.com/eventbridge/",
+      "https://docs.aws.amazon.com/autoscaling/ec2/userguide/scale-your-group.html",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248457400258&usg=AOvVaw0gtNh37o_AMVCphUoPNTFK",
+      "https://www.google.com/url?q=https://aws.amazon.com/cloudfront/&sa=D&source=apps-viewer-frontend&ust=1720248457400302&usg=AOvVaw130NLgbV_NLIwjimU7XOgW",
+      "https://aws.amazon.com/cloudfront/",
+      "https://www.google.com/url?q=https://aws.amazon.com/sqs/&sa=D&source=apps-viewer-frontend&ust=1720248457400314&usg=AOvVaw29oKXmMg1992QfbfTTT0Cl",
+      "https://aws.amazon.com/sqs/",
+      "https://www.google.com/url?q=https://aws.amazon.com/cloudwatch/&sa=D&source=apps-viewer-frontend&ust=1720248457400324&usg=AOvVaw1ENMkWppE8mg8yAKg6c8io",
+      "https://aws.amazon.com/cloudwatch/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html&sa=D&source=apps-viewer-frontend&ust=1720248457400335&usg=AOvVaw3wg__aJzLHXv9TkJKa1aqa",
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/cloudtrail/&sa=D&source=apps-viewer-frontend&ust=1720248457400347&usg=AOvVaw1pBteFQ9gMxgp7s84_vID5",
+      "https://aws.amazon.com/cloudtrail/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatch-Events-Monitoring-CloudWatch-Metrics.html&sa=D&source=apps-viewer-frontend&ust=1720248457400357&usg=AOvVaw3Ra-VaaGanttIf6YkCRE1S",
+      "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatch-Events-Monitoring-CloudWatch-Metrics.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/eventbridge/&sa=D&source=apps-viewer-frontend&ust=1720248457400370&usg=AOvVaw0jbdP_BB6WwP-rSww0liaA",
+      "https://aws.amazon.com/eventbridge/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/autoscaling/ec2/userguide/scale-your-group.html&sa=D&source=apps-viewer-frontend&ust=1720248457400382&usg=AOvVaw1EpWdg6G_fDOuiECY7Sh3E",
+      "https://docs.aws.amazon.com/autoscaling/ec2/userguide/scale-your-group.html"
+    ]
+  },
+  {
+    "_id": "12",
+    "question": "12 A company is creating a REST API. The company has strict requirements for the use of TLS. The company requires TLSv1.3 on the API endpoints. The company also requires a specific public third-party certificate authority (CA) to sign the TLS certificate. Which solution will meet these requirements?",
+    "options": [
+      "A. Use a local machine to create a certificate that is signed by the third-party CA. Import the certificate into AWS Certificate Manager (ACM). Create an HTTP API in Amazon API Gateway with a custom domain. Configure the custom domain to use the certificate.",
+      "B. Create a certificate in AWS Certificate Manager (ACM) that is signed by the third-party CA. Create an HTTP API in Amazon API Gateway with a custom domain. Configure the custom domain to use the certificate.",
+      "C. Use AWS Certificate Manager (ACM) to create a certificate that is signed by the third-party CA. Import the certificate into AWS Certificate Manager (ACM). Create an AWS Lambda function with a Lambda function URL. Configure the Lambda function URL to use the certificate.",
+      "D. Create a certificate in AWS Certificate Manager (ACM) that is signed by the third-party CA. Create an AWS Lambda function with a Lambda function URL. Configure the Lambda function URL to use the certificate."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html"
+    ]
+  },
+  {
+    "_id": 11,
+    "question": "11 A company runs an application on AWS. The application receives inconsistent amounts of usage. The application uses AWS Direct Connect to connect to an on-premises MySQL-compatible database. The on-premises database consistently uses a minimum of 2 GiB of memory. The company wants to migrate the on-premises database to a managed AWS service. The company wants to use auto scaling capabilities to manage unexpected workload increases. Which solution will meet these requirements with the LEAST administrative overhead?",
+    "options": [
+      "A. Provision an Amazon DynamoDB database with default read and write capacity settings.",
+      "B. Provision an Amazon Aurora database with a minimum capacity of 1 Aurora capacity unit (ACU).",
+      "C. Provision an Amazon Aurora Serverless v2 database with a minimum capacity of 1 Aurora capacity unit (ACU).",
+      "D. Provision an Amazon RDS for MySQL database with 2 GiB of memory."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.how-it-"
+    ]
+  },
+  {
+    "_id": 10,
+    "question": "10 A company wants to use an event-driven programming model with AWS Lambda. The company wants to reduce startup latency for Lambda functions that run on Java 11. The company does not have strict latency requirements for the applications. The company wants to reduce cold starts and outlier latencies when a function scales up. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Configure Lambda provisioned concurrency.",
+      "B. Increase the timeout of the Lambda functions.",
+      "C. Increase the memory of the Lambda functions.",
+      "D. Configure Lambda SnapStart."
+    ],
+    "explain": "",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248457938302&usg=AOvVaw2I1VsN0AoicBcH-GKDJLTY",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html&sa=D&source=apps-viewer-frontend&ust=1720248457938342&usg=AOvVaw2wIIn3WDtPQ0EIirwLiMSD",
+      "https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.how-it-works.html&sa=D&source=apps-viewer-frontend&ust=1720248457938351&usg=AOvVaw0QFf3JLtjM-ZYTyUmWMRdL",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.how-it-works.html",
+      "https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html",
+      "https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-",
+      "https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-",
+      "https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html"
+    ]
+  },
+  {
+    "_id": 9,
+    "question": "9 A financial services company launched a new application that uses an Amazon RDS for MySQL database. The company uses the application to track stock market trends. The company needs to operate the application for only 2 hours at the end of each week. The company needs to optimize the cost of running the database. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Migrate the existing RDS for MySQL database to an Aurora Serverless v2 MySQL database cluster.",
+      "B. Migrate the existing RDS for MySQL database to an Aurora MySQL database cluster.",
+      "C. Migrate the existing RDS for MySQL database to an Amazon EC2 instance that runs MySQL. Purchase an instance reservation for the EC2 instance.",
+      "D. Migrate the existing RDS for MySQL database to an Amazon Elastic Container Service (Amazon ECS) cluster that uses MySQL container images to run tasks."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/rds/aurora/",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_GettingStartedAurora.Creati",
+      "https://aws.amazon.com/ecs/",
+      "https://aws.amazon.com/rds/aurora/serverless/"
+    ]
+  },
+  {
+    "_id": 8,
+    "question": "8 A company deploys its applications on Amazon Elastic Kubernetes Service (Amazon EKS) behind an Application Load Balancer in an AWS Region. The application needs to store data in a PostgreSQL database engine. The company wants the data in the database to be highly available. The company also needs increased capacity for read workloads. Which solution will meet these requirements with the MOST operational efficiency?",
+    "options": [
+      "A. Create an Amazon DynamoDB database table configured with global tables.",
+      "B. Create an Amazon RDS database with Multi-AZ deployments.",
+      "C. Create an Amazon RDS database with Multi-AZ DB cluster deployment.",
+      "D. Create an Amazon RDS database configured with cross-Region read replicas."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://aws.amazon.com/eks/",
+      "https://aws.amazon.com/elasticloadbalancing/",
+      "https://aws.amazon.com/dynamodb/global-tables/",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248458524039&usg=AOvVaw36T27iDLWfAIk7gGUUumwu",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html&sa=D&source=apps-viewer-frontend&ust=1720248458524079&usg=AOvVaw2EeUPaD_u1Xo6DXMsg7QxA",
+      "https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html%23configuration-timeout-console&sa=D&source=apps-viewer-frontend&ust=1720248458524091&usg=AOvVaw0a558orxB-vQeUbqIXQB2q",
+      "https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-timeout-console",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html%23configuration-memory-console&sa=D&source=apps-viewer-frontend&ust=1720248458524103&usg=AOvVaw1CRS8Dbqc3e3ZvTCOQ4RMy",
+      "https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html#configuration-memory-console",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html&sa=D&source=apps-viewer-frontend&ust=1720248458524113&usg=AOvVaw3y9hb9RwQiNdgeB04xrDwL",
+      "https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/aurora/&sa=D&source=apps-viewer-frontend&ust=1720248458524121&usg=AOvVaw30MP-6g6ylQJJkigxBpkuy",
+      "https://aws.amazon.com/rds/aurora/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_GettingStartedAurora.Creati&sa=D&source=apps-viewer-frontend&ust=1720248458524130&usg=AOvVaw09ONkeEbC10HyQ1YH_dDib",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_GettingStartedAurora.Creati",
+      "https://www.google.com/url?q=https://aws.amazon.com/ecs/&sa=D&source=apps-viewer-frontend&ust=1720248458524138&usg=AOvVaw3LnrhDNpZ-FJ_4qk7GSEEE",
+      "https://aws.amazon.com/ecs/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/aurora/serverless/&sa=D&source=apps-viewer-frontend&ust=1720248458524146&usg=AOvVaw3GWlZ_bAIMMJX0qjSbUAec",
+      "https://aws.amazon.com/rds/aurora/serverless/",
+      "https://www.google.com/url?q=https://aws.amazon.com/eks/&sa=D&source=apps-viewer-frontend&ust=1720248458524154&usg=AOvVaw1PPjLCCPru6o92hnThoQeV",
+      "https://aws.amazon.com/eks/",
+      "https://www.google.com/url?q=https://aws.amazon.com/elasticloadbalancing/&sa=D&source=apps-viewer-frontend&ust=1720248458524160&usg=AOvVaw2iFaj_aDWG2okbCROPGCsc",
+      "https://aws.amazon.com/elasticloadbalancing/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/global-tables/&sa=D&source=apps-viewer-frontend&ust=1720248458524168&usg=AOvVaw37SVxcu2hU-G3taCqiEFbB",
+      "https://aws.amazon.com/dynamodb/global-tables/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html&sa=D&source=apps-viewer-frontend&ust=1720248458524176&usg=AOvVaw1-4C3C5x043JiV9iGwtDEE",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"
+    ]
+  },
+  {
+    "_id": 7,
+    "question": "7 A company is building a RESTful serverless web application on AWS by using Amazon API Gateway and AWS Lambda. The users of this web application will be geographically distributed, and the company wants to reduce the latency of API requests to these users. Which type of endpoint should a solutions architect use to meet these requirements?",
+    "options": [
+      "A. Private endpoint",
+      "B. Regional endpoint",
+      "C. Interface VPC endpoint",
+      "D. Edge-optimized endpoint"
+    ],
+    "explain": "",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://aws.amazon.com/api-gateway/",
+      "https://aws.amazon.com/lambda/",
+      "https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html",
+      "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html"
+    ]
+  },
+  {
+    "_id": 6,
+    "question": "6 A company uses an Amazon CloudFront distribution to serve content pages for its website. The company needs to ensure that clients use a TLS certificate when accessing the company's website. The company wants to automate the creation and renewal of the TLS certificates. Which solution will meet these requirements with the MOST operational efficiency?",
+    "options": [
+      "A. Use a CloudFront security policy to create a certificate.",
+      "B. Use a CloudFront origin access control (OAC) to create a certificate.",
+      "C. Use AWS Certificate Manager (ACM) to create a certificate. Use DNS validation for the domain.",
+      "D. Use AWS Certificate Manager (ACM) to create a certificate. Use email validation for the domain."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://aws.amazon.com/cloudfront/",
+      "https://aws.amazon.com/about-aws/whats-new/2020/07/cloudfront-tls-security-policy/",
+      "https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-",
+      "https://aws.amazon.com/certificate-manager/",
+      "https://docs.aws.amazon.com/acm/latest/userguide/email-automation.html",
+      "https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html"
+    ]
+  },
+  {
+    "_id": 5,
+    "question": "5 A company deployed a serverless application that uses Amazon DynamoDB as a database layer. The application has experienced a large increase in users. The company wants to improve database response time from milliseconds to microseconds and to cache requests to the database. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Use DynamoDB Accelerator (DAX).\nB. Migrate the database to Amazon Redshift.\nC. Migrate the database to Amazon RDS.\nD. Use Amazon ElastiCache for Redis."
+    ],
+    "explain": " https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248459039213&usg=AOvVaw3m_Z8XRqixxAgnlnYUXyir https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.CrossRegionReadReplicas.html&sa=D&source=apps-viewer-frontend&ust=1720248459039268&usg=AOvVaw0br_j3Xney-BX2EpkCJ_RP https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.CrossRegionReadReplicas.html https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html&sa=D&source=apps-viewer-frontend&ust=1720248459039282&usg=AOvVaw3a5OIKkA6YhCotdcnusXHB https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html https://www.google.com/url?q=https://aws.amazon.com/api-gateway/&sa=D&source=apps-viewer-frontend&ust=1720248459039293&usg=AOvVaw3O9bWLklTh_bbMyifc6zdD https://aws.amazon.com/api-gateway/ https://www.google.com/url?q=https://aws.amazon.com/lambda/&sa=D&source=apps-viewer-frontend&ust=1720248459039304&usg=AOvVaw3mbyOIkl6RazVxR0M9abwn https://aws.amazon.com/lambda/ https://www.google.com/url?q=https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html&sa=D&source=apps-viewer-frontend&ust=1720248459039314&usg=AOvVaw33mY88EgfL0nj1bOgXXC-5 https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html https://www.google.com/url?q=https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html&sa=D&source=apps-viewer-frontend&ust=1720248459039325&usg=AOvVaw1rxS9fMwRI-J8YFm8v_dcG https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html https://www.google.com/url?q=https://aws.amazon.com/cloudfront/&sa=D&source=apps-viewer-frontend&ust=1720248459039337&usg=AOvVaw1PS9dijzJnEbbW7LTJu9gW https://aws.amazon.com/cloudfront/ https://www.google.com/url?q=https://aws.amazon.com/about-aws/whats-new/2020/07/cloudfront-tls-security-policy/&sa=D&source=apps-viewer-frontend&ust=1720248459039347&usg=AOvVaw3NI88YULXuvs4wgPF-AF0R https://aws.amazon.com/about-aws/whats-new/2020/07/cloudfront-tls-security-policy/ https://www.google.com/url?q=https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/&sa=D&source=apps-viewer-frontend&ust=1720248459039358&usg=AOvVaw3I6zoqSkFtVMrKv7bo9QsR https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/ https://www.google.com/url?q=https://aws.amazon.com/certificate-manager/&sa=D&source=apps-viewer-frontend&ust=1720248459039370&usg=AOvVaw0aSW1CG5DEAFnIghTayUV6 https://aws.amazon.com/certificate-manager/ https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/email-automation.html&sa=D&source=apps-viewer-frontend&ust=1720248459039381&usg=AOvVaw2WUF1dxBV42jrMGsm3FXnQ https://docs.aws.amazon.com/acm/latest/userguide/email-automation.html https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html&sa=D&source=apps-viewer-frontend&ust=1720248459039392&usg=AOvVaw0dLpRHBTlZ1TGz8ItTD0bh https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html 13",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248459039213&usg=AOvVaw3m_Z8XRqixxAgnlnYUXyir",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.CrossRegionReadReplicas.html&sa=D&source=apps-viewer-frontend&ust=1720248459039268&usg=AOvVaw0br_j3Xney-BX2EpkCJ_RP",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.CrossRegionReadReplicas.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html&sa=D&source=apps-viewer-frontend&ust=1720248459039282&usg=AOvVaw3a5OIKkA6YhCotdcnusXHB",
+      "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/api-gateway/&sa=D&source=apps-viewer-frontend&ust=1720248459039293&usg=AOvVaw3O9bWLklTh_bbMyifc6zdD",
+      "https://aws.amazon.com/api-gateway/",
+      "https://www.google.com/url?q=https://aws.amazon.com/lambda/&sa=D&source=apps-viewer-frontend&ust=1720248459039304&usg=AOvVaw3mbyOIkl6RazVxR0M9abwn",
+      "https://aws.amazon.com/lambda/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html&sa=D&source=apps-viewer-frontend&ust=1720248459039314&usg=AOvVaw33mY88EgfL0nj1bOgXXC-5",
+      "https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html&sa=D&source=apps-viewer-frontend&ust=1720248459039325&usg=AOvVaw1rxS9fMwRI-J8YFm8v_dcG",
+      "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/cloudfront/&sa=D&source=apps-viewer-frontend&ust=1720248459039337&usg=AOvVaw1PS9dijzJnEbbW7LTJu9gW",
+      "https://aws.amazon.com/cloudfront/",
+      "https://www.google.com/url?q=https://aws.amazon.com/about-aws/whats-new/2020/07/cloudfront-tls-security-policy/&sa=D&source=apps-viewer-frontend&ust=1720248459039347&usg=AOvVaw3NI88YULXuvs4wgPF-AF0R",
+      "https://aws.amazon.com/about-aws/whats-new/2020/07/cloudfront-tls-security-policy/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/&sa=D&source=apps-viewer-frontend&ust=1720248459039358&usg=AOvVaw3I6zoqSkFtVMrKv7bo9QsR",
+      "https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/",
+      "https://www.google.com/url?q=https://aws.amazon.com/certificate-manager/&sa=D&source=apps-viewer-frontend&ust=1720248459039370&usg=AOvVaw0aSW1CG5DEAFnIghTayUV6",
+      "https://aws.amazon.com/certificate-manager/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/email-automation.html&sa=D&source=apps-viewer-frontend&ust=1720248459039381&usg=AOvVaw2WUF1dxBV42jrMGsm3FXnQ",
+      "https://docs.aws.amazon.com/acm/latest/userguide/email-automation.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html&sa=D&source=apps-viewer-frontend&ust=1720248459039392&usg=AOvVaw0dLpRHBTlZ1TGz8ItTD0bh",
+      "https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html",
+      "https://aws.amazon.com/dynamodb/",
+      "https://aws.amazon.com/redshift/",
+      "https://aws.amazon.com/elasticache/redis/",
+      "https://aws.amazon.com/dynamodb/dax/"
+    ]
+  },
+  {
+    "_id": 4,
+    "question": "4 A company runs an application that uses Amazon RDS for PostgreSQL. The application receives traffic only on weekdays during business hours. The company wants to optimize costs and reduce operational overhead based on this usage. Which solution will meet these requirements?",
+    "options": [
+      "A. Use the Instance Scheduler on AWS to configure start and stop schedules.",
+      "B. Turn off automatic backups. Create weekly manual snapshots of the database.",
+      "C. Create a custom AWS Lambda function to start and stop the database based on minimum CPU utilization.",
+      "D. Purchase All Upfront reserved DB instances"
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://aws.amazon.com/rds/",
+      "https://aws.amazon.com/rds/features/backup/",
+      "https://aws.amazon.com/blogs/database/schedule-amazon-rds-stop-and-start-using-aws-lambda/",
+      "https://aws.amazon.com/rds/reserved-instances/",
+      "https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/"
+    ]
+  },
+  {
+    "_id": 3,
+    "question": "3 A company uses locally attached storage to run a latency-sensitive application on premises. The company is using a lift and shift method to move the application to the AWS Cloud. The company does not want to change the application architecture. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Configure an Auto Scaling group with an Amazon EC2 instance. Use an Amazon FSx for Lustre file system to run the application.",
+      "B. Host the application on an Amazon EC2 instance. Use an Amazon Elastic Block Store (Amazon EBS) GP2 volume to run the application.",
+      "C. Configure an Auto Scaling group with an Amazon EC2 instance. Use an Amazon FSx for OpenZFS file system to run the application.",
+      "D. Host the application on an Amazon EC2 instance. Use an Amazon Elastic Block Store (Amazon EBS) GP3 volume to run the application."
+    ],
+    "explain": "",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://aws.amazon.com/fsx/",
+      "https://aws.amazon.com/ebs/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248459610316&usg=AOvVaw1rv494xJqb0t9tzIjjriXa",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/&sa=D&source=apps-viewer-frontend&ust=1720248459610367&usg=AOvVaw3HEImUT3QdcLkXmyp2Na9A",
+      "https://aws.amazon.com/dynamodb/",
+      "https://www.google.com/url?q=https://aws.amazon.com/redshift/&sa=D&source=apps-viewer-frontend&ust=1720248459610396&usg=AOvVaw2R5cZCstB4gIcXITcw3dhl",
+      "https://aws.amazon.com/redshift/",
+      "https://www.google.com/url?q=https://aws.amazon.com/elasticache/redis/&sa=D&source=apps-viewer-frontend&ust=1720248459610408&usg=AOvVaw0T6vyq6AgKAhUf4vhufNST",
+      "https://aws.amazon.com/elasticache/redis/",
+      "https://www.google.com/url?q=https://aws.amazon.com/dynamodb/dax/&sa=D&source=apps-viewer-frontend&ust=1720248459610419&usg=AOvVaw077ix7FgI-WVCl7kDVNFis",
+      "https://aws.amazon.com/dynamodb/dax/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/&sa=D&source=apps-viewer-frontend&ust=1720248459610429&usg=AOvVaw31kV1aoWn0clyqjcLFYeZr",
+      "https://aws.amazon.com/rds/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/features/backup/&sa=D&source=apps-viewer-frontend&ust=1720248459610440&usg=AOvVaw36bLXbIO1UmC4qimdCUMDQ",
+      "https://aws.amazon.com/rds/features/backup/",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/database/schedule-amazon-rds-stop-and-start-using-aws-lambda/&sa=D&source=apps-viewer-frontend&ust=1720248459610451&usg=AOvVaw3hiQZuY8IGS07ta2s9KbZV",
+      "https://aws.amazon.com/blogs/database/schedule-amazon-rds-stop-and-start-using-aws-lambda/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/reserved-instances/&sa=D&source=apps-viewer-frontend&ust=1720248459610462&usg=AOvVaw3l_hbgeYmYR96XKyGbik-l",
+      "https://aws.amazon.com/rds/reserved-instances/",
+      "https://www.google.com/url?q=https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/&sa=D&source=apps-viewer-frontend&ust=1720248459610473&usg=AOvVaw2fbgDVUPxUWPFOddbdadSB",
+      "https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/",
+      "https://www.google.com/url?q=https://aws.amazon.com/fsx/&sa=D&source=apps-viewer-frontend&ust=1720248459610484&usg=AOvVaw18R-HqxHtn7SyXNbsonHCm",
+      "https://aws.amazon.com/fsx/",
+      "https://www.google.com/url?q=https://aws.amazon.com/ebs/&sa=D&source=apps-viewer-frontend&ust=1720248459610499&usg=AOvVaw2Sw06HP-t4zs6kjJeYt1pF",
+      "https://aws.amazon.com/ebs/"
+    ]
+  },
+  {
+    "_id": 2,
+    "question": "2 A company runs a stateful production application on Amazon EC2 instances. The application requires at least two EC2 instances to always be running. A solutions architect needs to design a highly available and fault-tolerant architecture for the application. The solutions architect creates an Auto Scaling group of EC2 instances. Which set of additional steps should the solutions architect take to meet these requirements?",
+    "options": [
+      "A. Set the Auto Scaling group's minimum capacity to two. Deploy one On-Demand Instance in one Availability Zone and one On-Demand Instance in a second Availability Zone.",
+      "B. Set the Auto Scaling group's minimum capacity to four. Deploy two On-Demand Instances in one Availability Zone and two On-Demand Instances in a second Availability Zone.",
+      "C. Set the Auto Scaling group's minimum capacity to two. Deploy four Spot Instances in one Availability Zone.",
+      "D. Set the Auto Scaling group's minimum capacity to four. Deploy two On-Demand Instances in one Availability Zone and two Spot Instances in a second Availability Zone."
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://aws.amazon.com/about-aws/global-infrastructure/regions_az/",
+      "https://docs.aws.amazon.com/whitepapers/latest/availability-and-beyond-improving-resilience/fault-",
+      "https://aws.amazon.com/ec2/autoscaling/",
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html"
+    ]
+  },
+  {
+    "_id": 1,
+    "question": "1 A company has 5 PB of archived data on physical tapes. The company needs to preserve the data on the tapes for another 10 years for compliance purposes. The company wants to migrate to AWS in the next 6 months. The data center that stores the tapes has a 1 Gbps uplink internet connectivity. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Read the data from the tapes on premises. Stage the data in a local NFS storage. Use AWS DataSync to migrate the data to Amazon S3 Glacier Flexible Retrieval.",
+      "B. Use an on-premises backup application to read the data from the tapes and to write directly to Amazon S3 Glacier Deep Archive.",
+      "C. Order multiple AWS Snowball devices that have Tape Gateway. Copy the physical tapes to virtual tapes in Snowball. Ship the Snowball devices to AWS. Create a lifecycle policy to move the tapes to Amazon S3 Glacier Deep Archive.",
+      "D. Configure an on-premises Tape Gateway. Create virtual tapes in the AWS Cloud. Use backup software to copy the physical tape to the virtual tape."
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://aws.amazon.com/datasync/",
+      "https://aws.amazon.com/s3/",
+      "https://aws.amazon.com/s3/storage-classes/glacier/",
+      "https://aws.amazon.com/storagegateway/",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248460140032&usg=AOvVaw0pHA1K2Cekmfy3V8tosKTd",
+      "https://www.google.com/url?q=https://aws.amazon.com/about-aws/global-infrastructure/regions_az/&sa=D&source=apps-viewer-frontend&ust=1720248460140062&usg=AOvVaw1q-N2yZyKl6Wjwz4GYiiMV",
+      "https://aws.amazon.com/about-aws/global-infrastructure/regions_az/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/whitepapers/latest/availability-and-beyond-improving-resilience/fault-tolerance-and-fault-isolation.html&sa=D&source=apps-viewer-frontend&ust=1720248460140071&usg=AOvVaw1gQXjIZoT3PoyPKnRQ1otQ",
+      "https://docs.aws.amazon.com/whitepapers/latest/availability-and-beyond-improving-resilience/fault-tolerance-and-fault-isolation.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/ec2/autoscaling/&sa=D&source=apps-viewer-frontend&ust=1720248460140084&usg=AOvVaw1nm7C8XnoKTYLVzzcKi4ct",
+      "https://aws.amazon.com/ec2/autoscaling/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html&sa=D&source=apps-viewer-frontend&ust=1720248460140091&usg=AOvVaw3hJJk3_A6gyhpdElUXUQr4",
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/datasync/&sa=D&source=apps-viewer-frontend&ust=1720248460140098&usg=AOvVaw1xUzz7q65kP_hANc_7ypHm",
+      "https://aws.amazon.com/datasync/",
+      "https://www.google.com/url?q=https://aws.amazon.com/s3/&sa=D&source=apps-viewer-frontend&ust=1720248460140104&usg=AOvVaw2IqgCyLfgDg_-h_SJ5Wnnz",
+      "https://aws.amazon.com/s3/",
+      "https://www.google.com/url?q=https://aws.amazon.com/s3/storage-classes/glacier/&sa=D&source=apps-viewer-frontend&ust=1720248460140110&usg=AOvVaw1DDElNfgpL249dj1Q83rCP",
+      "https://aws.amazon.com/s3/storage-classes/glacier/",
+      "https://www.google.com/url?q=https://aws.amazon.com/storagegateway/&sa=D&source=apps-viewer-frontend&ust=1720248460140117&usg=AOvVaw2gCRYuPnRJjyF9qGs32PZB",
+      "https://aws.amazon.com/storagegateway/",
+      "https://aws.amazon.com/snowball/",
+      "https://docs.aws.amazon.com/snowball/latest/developer-guide/using-snowball-tape-gateway.html"
+    ]
+  },
+  {
+    "_id": 81,
+    "question": "81 # A company wants to ingest customer payment data into the company's data lake in Amazon S3. The company receives payment data every minute on average. The company wants to analyze the payment data in real time. Then the company wants to ingest the data into the data lake. Which solution will meet these requirements with the MOST operational efficiency?",
+    "options": [
+      "A. Use Amazon Kinesis Data Streams to ingest data. Use AWS Lambda to analyze the data in real time.\nB. Use AWS Glue to ingest data. Use Amazon Kinesis Data Analytics to analyze the data in real time.\nC. Use Amazon Kinesis Data Firehose to ingest data. Use Amazon Kinesis Data Analytics to analyze the data in real time.\nD. Use Amazon API Gateway to ingest data. Use AWS Lambda to analyze the data in real time. "
+    ],
+    "explain": "By leveraging the combination of Amazon Kinesis Data Firehose and Amazon Kinesis Data Analytics, you can efficiently ingest and analyze the payment data in real time without the need for manual processing or additional infrastructure management. This solution provides a streamlined and scalable approach to handle continuous data ingestion and analysis requirements. Quote “Connect with 30+ fully integrated AWS services and streaming destinations such as Amazon Simple Storage Service (S3)” at resources:",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://aws.amazon.com/kinesis/data-firehose/",
+      "https://aws.amazon.com/kinesis/data-analytics/"
+    ]
+  },
+  {
+    "_id": 80,
+    "question": "80 A company runs a website that uses a content management system (CMS) on Amazon EC2. The CMS runs on a single EC2 instance and uses an Amazon Aurora MySQL Multi-AZ DB instance for the data tier. Website images are stored on an Amazon Elastic Block Store (Amazon EBS) volume that is mounted inside the EC2 instance. Which combination of actions should a solutions architect take to improve the performance and resilience of the website? (Choose two.)",
+    "options": [
+      "A. Move the website images into an Amazon S3 bucket that is mounted on every EC2 instance",
+      "B. Share the website images by using an NFS share from the primary EC2 instance. Mount this share on the other EC2 instances.",
+      "C. Move the website images onto an Amazon Elastic File System (Amazon EFS) file system that is mounted on every EC2 instance.",
+      "D. Create an Amazon Machine Image (AMI) from the existing EC2 instance. Use the AMI to provision new instances behind an Application Load Balancer as part of an Auto Scaling group. Configure the Auto Scaling group to maintain a minimum of two instances. Configure an accelerator in AWS Global Accelerator for the website",
+      "E. Create an Amazon Machine Image (AMI) from the existing EC2 instance. Use the AMI to provision new instances behind an Application Load Balancer as part of an Auto Scaling group. Configure the"
+    ],
+    "explain": "",
+    "answers": [
+      "3",
+      "5"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248460728060&usg=AOvVaw3MbgVM7dfb_AGb3dRiXbGZ",
+      "https://www.google.com/url?q=https://aws.amazon.com/snowball/&sa=D&source=apps-viewer-frontend&ust=1720248460728101&usg=AOvVaw02-A3ty3j8G2rP3oOo4C3a",
+      "https://aws.amazon.com/snowball/",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/snowball/latest/developer-guide/using-snowball-tape-gateway.html&sa=D&source=apps-viewer-frontend&ust=1720248460728111&usg=AOvVaw2SVYvJ0ungSYmbspQIy1sw",
+      "https://docs.aws.amazon.com/snowball/latest/developer-guide/using-snowball-tape-gateway.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/kinesis/data-firehose/&sa=D&source=apps-viewer-frontend&ust=1720248460728120&usg=AOvVaw2L0qHgY_XWUoRb1O_BD-W9",
+      "https://aws.amazon.com/kinesis/data-firehose/",
+      "https://www.google.com/url?q=https://aws.amazon.com/kinesis/data-analytics/&sa=D&source=apps-viewer-frontend&ust=1720248460728128&usg=AOvVaw28NaaaBH5I0wXYI6Zn_5dU",
+      "https://aws.amazon.com/kinesis/data-analytics/"
+    ]
+  },
+  {
+    "_id": 79,
+    "question": "79 A company runs an infrastructure monitoring service. The company is building a new feature that will enable the service to monitor data in customer AWS accounts. The new feature will call AWS APIs in customer accounts to describe Amazon EC2 instances and read Amazon CloudWatch metrics. What should the company do to obtain access to customer accounts in the MOST secure way?",
+    "options": [
+      "A. Ensure that the customers create an IAM role in their account with read-only EC2 and CloudWatch permissions and a trust policy to the company’s account.\nB. Create a serverless API that implements a token vending machine to provide temporary AWS credentials for a role with read-only EC2 and CloudWatch permissions.\nC. Ensure that the customers create an IAM user in their account with read-only EC2 and CloudWatch permissions. Encrypt and store customer access and secret keys in a secrets management system.\nD. Ensure that the customers create an Amazon Cognito user in their account to use an IAM role with read-only EC2 and CloudWatch permissions. Encrypt and store the Amazon Cognito user and password in a secrets management system. "
+    ],
+    "explain": "By having customers create an IAM role with the necessary permissions in their own accounts, the company can use AWS Identity and Access Management (IAM) to establish cross-account access. The trust policy allows the company's AWS account to assume the customer's IAM role temporarily, granting access to the specified resources (EC2 instances and CloudWatch metrics) within the customer's account. This approach follows the principle of least privilege, as the company only requests the necessary permissions and does not require long-term access keys or user credentials from the customers.",
+    "answers": [
+      "1"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 78,
+    "question": "78 A company needs to connect several VPCs in the us-east-1 Region that span hundreds of AWS accounts. The company's networking team has its own AWS account to manage the cloud network. What is the MOST operationally efficient solution to connect the VPCs?",
+    "options": [
+      "A. Set up VPC peering connections between each VPC. Update each associated subnet’s route table\nB. Configure a NAT gateway and an internet gateway in each VPC to connect each VPC through the internet\nC. Create an AWS Transit Gateway in the networking team’s AWS account. Configure static routes from each VPC.\nD. Deploy VPN gateways in each VPC. Create a transit VPC in the networking team’s AWS account to connect to each VPC. "
+    ],
+    "explain": "AWS Transit Gateway is a highly scalable and centralized hub for connecting multiple VPCs, on-premises networks, and remote networks. It simplifies network connectivity by providing a single entry point and reducing the number of connections required. In this scenario, deploying an AWS Transit Gateway in the networking team's AWS account allows for efficient management and control over the network connectivity across multiple VPCs.",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248461283920&usg=AOvVaw26ASZATjjHCZQhBrpDdVSy"
+    ]
+  },
+  {
+    "_id": "77",
+    "question": "77 A company has Amazon EC2 instances that run nightly batch jobs to process data. The EC2 instances run in an Auto Scaling group that uses On-Demand billing. If a job fails on one instance, another instance will reprocess the job. The batch jobs run between 12:00 AM and 06:00 AM local time every day. Which solution will provide EC2 instances to meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Purchase a 1-year Savings Plan for Amazon EC2 that covers the instance family of the Auto Scaling group that the batch job uses.\nB. Purchase a 1-year Reserved Instance for the specific instance type and operating system of the instances in the Auto Scaling group that the batch job uses.\nC. Create a new launch template for the Auto Scaling group. Set the instances to Spot Instances. Set a policy to scale out based on CPU usage.\nD. Create a new launch template for the Auto Scaling group. Increase the instance size. Set a policy to scale out based on CPU usage. "
+    ],
+    "explain": "Purchasing a 1-year Savings Plan (option A) or a 1-year Reserved Instance (option B) may provide cost savings, but they are more suitable for long-running, steady-state workloads. Since your batch jobs run for a specific period each day, using Spot Instances with the ability to scale out based on CPU usage is a more cost-effective choice.",
+    "answers": [
+      "3"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 76,
+    "question": "76 A social media company is building a feature for its website. The feature will give users the ability to upload photos. The company expects significant increases in demand during large events and must ensure that the website can handle the upload traffic from users. Which solution meets these requirements with the MOST scalability?",
+    "options": [
+      "A. Upload files from the user's browser to the application servers. Transfer the files to an Amazon S3 bucket.\nB. Provision an AWS Storage Gateway file gateway. Upload files directly from the user's browser to the file gateway.\nC. Generate Amazon S3 presigned URLs in the application. Upload files directly from the user's browser into an S3 bucket.\nD. Provision an Amazon Elastic File System (Amazon EFS) file system. Upload files directly from the user's browser to the file system. "
+    ],
+    "explain": "This approach allows users to upload files directly to S3 without passing through the application servers  reducing the load on the application and improving scalability. It leverages the client-side capabilities to handle the file uploads and offloads the processing to S3.",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html"
+    ]
+  },
+  {
+    "_id": 75,
+    "question": "75 A company has a web application for travel ticketing. The application is based on a database that runs in a single data center in North America. The company wants to expand the application to serve a global user base. The company needs to deploy the application to multiple AWS Regions. Average latency must be less than 1 second on updates to the reservation database. The company wants to have separate deployments of its web platform across multiple Regions. However, the company must maintain a single primary reservation database that is globally consistent. Which solution should a solutions architect recommend to meet these requirements?",
+    "options": [
+      "A. Convert the application to use Amazon DynamoDB. Use a global table for the center reservation table. Use the correct Regional endpoint in each Regional deployment.\nB. Migrate the database to an Amazon Aurora MySQL database. Deploy Aurora Read Replicas in each Region. Use the correct Regional endpoint in each Regional deployment for access to the database.\nC. Migrate the database to an Amazon RDS for MySQL database. Deploy MySQL read replicas in each Region. Use the correct Regional endpoint in each Regional deployment for access to the database.\nD. Migrate the application to an Amazon Aurora serverless database. Deploy instances of database to each Region. Use the correct Regional endpoint in each Regional deployment to access the database. Use AWS Lambda functions to process event streams in each Region to synchronize the database."
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248461864448&usg=AOvVaw0nxjcsfklppxJBPW9LXBqH\nhttps://www.google.com/url?q=https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html&sa=D&source=apps-viewer-frontend&ust=1720248461864490&usg=AOvVaw3Q78d2qFBO0c7lY3_efUi_ https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html\nhttps://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248461864448&usg=AOvVaw0nxjcsfklppxJBPW9LXBqH\nhttps://www.google.com/url?q=https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html&sa=D&source=apps-viewer-frontend&ust=1720248461864490&usg=AOvVaw3Q78d2qFBO0c7lY3_efUi_\nhttps://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html"
+    ]
+  },
+  {
+    "_id": 74,
+    "question": "74 A company has migrated multiple Microsoft Windows Server workloads to Amazon EC2 instances that run in the us-west-1 Region. The company manually backs up the workloads to create an image as needed. In the event of a natural disaster in the us-west-1 Region, the company wants to recover workloads quickly in the us-west-2 Region. The company wants no more than 24 hours of data loss on the EC2 instances. The company also wants to automate any backups of the EC2 instances. Which solutions will meet these requirements with the LEAST administrative effort? (Choose two.)",
+    "options": [
+      "A. Create an Amazon EC2-backed Amazon Machine Image (AMI) lifecycle policy to create a backup based on tags. Schedule the backup to run twice daily. Copy the image on demand.\nB. Create an Amazon EC2-backed Amazon Machine Image (AMI) lifecycle policy to create a backup based on tags. Schedule the backup to run twice daily. Configure the copy to the us-west-2 Region.\nC. Create backup vaults in us-west-1 and in us-west-2 by using AWS Backup. Create a backup plan for the EC2 instances based on tag values. Create an AWS Lambda function to run as a scheduled job to copy the backup data to us-west-2.\nD. Create a backup vault by using AWS Backup. Use AWS Backup to create a backup plan for the EC2 instances based on tag values. Define the destination for the copy as us-west-2. Specify the backup schedule to run twice daily.\nE. Create a backup vault by using AWS Backup. Use AWS Backup to create a backup plan for the EC2 instances based on tag values. Specify the backup schedule to run twice daily. Copy on demand to us- west-2. "
+    ],
+    "explain": "Selected Answer: BD Option B suggests using an EC2-backed Amazon Machine Image (AMI) lifecycle policy to automate the backup process. By configuring the policy to run twice daily and specifying the copy to the us-west-2 Region, the company can ensure regular backups are created and copied to the alternate region. Option D proposes using AWS Backup, which provides a centralized backup management solution. By creating a backup vault and backup plan based on tag values, the company can automate the backup process for the EC2 instances. The backup schedule can be set to run twice daily, and the destination for the copy can be defined as the us-west-2 Region. Both options automate the backup process and include copying the backups to the us-west-2 Region, ensuring data resilience in the event of a disaster. These solutions minimize administrative effort by leveraging automated backup and copy mechanisms provided by AWS services.",
+    "answers": [
+      "2",
+      "4"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248462434442&usg=AOvVaw0_BVkGLJxfbhH3lCJvBrsG"
+    ]
+  },
+  {
+    "_id": "73",
+    "question": "73 A company operates a two-tier application for image processing. The application uses two Availability Zones, each with one public subnet and one private subnet. An Application Load Balancer (ALB) for the web tier uses the public subnets. Amazon EC2 instances for the application tier use the private subnets. Users report that the application is running more slowly than expected. A security audit of the web server log files shows that the application is receiving millions of illegitimate requests from a small number of IP addresses. A solutions architect needs to resolve the immediate performance problem while the company investigates a more permanent solution. What should the solutions architect recommend to meet this requirement?",
+    "options": [
+      "A. Modify the inbound security group for the web tier. Add a deny rule for the IP addresses that are consuming resources.\nB. Modify the network ACL for the web tier subnets. Add an inbound deny rule for the IP addresses that are consuming resources.\nC. Modify the inbound security group for the application tier. Add a deny rule for the IP addresses that are consuming resources.\nD. Modify the network ACL for the application tier subnets. Add an inbound deny rule for the IP addresses that are consuming resources. "
+    ],
+    "explain": "In this scenario, the security audit reveals that the application is receiving millions of illegitimate requests from a small number of IP addresses. To address this issue, it is recommended to modify the network ACL (Access Control List) for the web tier subnets. By adding an inbound deny rule specifically targeting the IP addresses that are consuming resources, the network ACL can block the illegitimate traffic at the subnet level before it reaches the web servers. This will help alleviate the excessive load on the web tier and improve the application's performance. A and C out due to the fact that SG does not have deny on allow rules.",
+    "answers": [
+      "2"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 72,
+    "question": "72 A global marketing company has applications that run in the ap-southeast-2 Region and the eu-west-1 Region. Applications that run in a VPC in eu-west-1 need to communicate securely with databases that run in a VPC in ap-southeast-2. Which network design will meet these requirements?",
+    "options": [
+      "A. Create a VPC peering connection between the eu-west-1 VPC and the ap-southeast-2 VPC. Create an inbound rule in the eu-west-1 application security group that allows traffic from the database server IP addresses in the ap-southeast-2 security group.\nB. Configure a VPC peering connection between the ap-southeast-2 VPC and the eu-west-1 VPC. Update the subnet route tables. Create an inbound rule in the ap-southeast-2 database security group that references the security group ID of the application servers in eu-west-1.\nC. Configure a VPC peering connection between the ap-southeast-2 VPC and the eu-west-1 VPUpdate the subnet route tables. Create an inbound rule in the ap-southeast-2 database security group that allows traffic from the eu-west-1 application server IP addresses.\nD. Create a transit gateway with a peering attachment between the eu-west-1 VPC and the ap- southeast-2 VPC. After the transit gateways are properly peered and routing is configured create an inbound rule in the database security group that references the security group ID of the application servers in eu-west-1. "
+    ],
+    "explain": "Answer: C -->\"You cannot reference the security group of a peer VPC that's in a different Region. Instead, use the CIDR block of the peer VPC.\"",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/vpc/latest/peering/vpc-",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248463285750&usg=AOvVaw3Cm9zpVbItMzzhJwgVddeW",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html&sa=D&source=apps-viewer-frontend&ust=1720248463285807&usg=AOvVaw0dPPN1t5UDUv_TbiJed-tP",
+      "https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html"
+    ]
+  },
+  {
+    "_id": 71,
+    "question": "71 A company is developing software that uses a PostgreSQL database schema. The company needs to configure multiple development environments and databases for the company's developers. On average, each development environment is used for half of the 8-hour workday. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "A. Configure each development environment with its own Amazon Aurora PostgreSQL database\nB. Configure each development environment with its own Amazon RDS for PostgreSQL Single-AZ DB instances\nC. Configure each development environment with its own Amazon Aurora On-Demand PostgreSQL- Compatible database\nD. Configure each development environment with its own Amazon S3 bucket by using Amazon S3 Object Select "
+    ],
+    "explain": "Option C suggests using Amazon Aurora On-Demand PostgreSQL-Compatible databases for each development environment. This option provides the benefits of Amazon Aurora, which is a high- performance and scalable database engine, while allowing you to pay for usage on an on-demand basis. Amazon Aurora On-Demand instances are typically more cost-effective for individual development environments compared to the provisioned capacity options. Option B suggests using Amazon RDS for PostgreSQL Single-AZ DB instances for each development environment. While Amazon RDS is a reliable and cost-effective option, it may have slightly higher costs compared to Amazon Aurora On-Demand instances.",
+    "answers": [
+      "1"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 70,
+    "question": "70 A company uses AWS Organizations with resources tagged by account. The company also uses AWS Backup to back up its AWS infrastructure resources. The company needs to back up all AWS resources. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Use AWS Config to identify all untagged resources. Tag the identified resources programmatically. Use tags in the backup plan.\nB. Use AWS Config to identify all resources that are not running. Add those resources to the backup vault.\nC. Require all AWS account owners to review their resources to identify the resources that need to be backed up.\nD. Use Amazon Inspector to identify all noncompliant resources. "
+    ],
+    "explain": "This solution allows you to leverage AWS Config to identify any untagged resources within your AWS Organizations accounts. Once identified, you can programmatically apply the necessary tags to indicate the backup requirements for each resource. By using tags in the backup plan configuration, you can ensure that only the tagged resources are included in the backup process, reducing operational overhead and ensuring all necessary resources are backed up.",
+    "answers": [
+      "1"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 69,
+    "question": "69 A social media company wants to allow its users to upload images in an application that is hosted in the AWS Cloud. The company needs a solution that automatically resizes the images so that the images can be displayed on multiple device types. The application experiences unpredictable traffic patterns throughout the day. The company is seeking a highly available solution that maximizes scalability. What should a solutions architect do to meet these requirements? https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248463992817&usg=AOvVaw3w-ZQQnGDzc9CKxEY5JhKc 21",
+    "options": [
+      "A. Create a static website hosted in Amazon S3 that invokes AWS Lambda functions to resize the images and store the images in an Amazon S3 bucket.\nB. Create a static website hosted in Amazon CloudFront that invokes AWS Step Functions to resize the images and store the images in an Amazon RDS database.\nC. Create a dynamic website hosted on a web server that runs on an Amazon EC2 instance. Configure a process that runs on the EC2 instance to resize the images and store the images in an Amazon S3 bucket.\nD. Create a dynamic website hosted on an automatically scaling Amazon Elastic Container Service (Amazon ECS) cluster that creates a resize job in Amazon Simple Queue Service (Amazon SQS). Set up an image-resizing program that runs on an Amazon EC2 instance to process the resize jobs. "
+    ],
+    "explain": "Selected Answer: A By using Amazon S3 and AWS Lambda together, you can create a serverless architecture that provides highly scalable and available image resizing capabilities. Here's how the solution would work: Set up an Amazon S3 bucket to store the original images uploaded by users. Configure an event trigger on the S3 bucket to invoke an AWS Lambda function whenever a new image is uploaded. The Lambda function can be designed to retrieve the uploaded image, perform the necessary resizing operations based on device requirements, and store the resized images back in the S3 bucket or a different bucket designated for resized images. Configure the Amazon S3 bucket to make the resized images publicly accessible for serving to users.",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248463992817&usg=AOvVaw3w-ZQQnGDzc9CKxEY5JhKc"
+    ]
+  },
+  {
+    "_id": 68,
+    "question": "68 A company is running a microservices application on Amazon EC2 instances. The company wants to migrate the application to an Amazon Elastic Kubernetes Service (Amazon EKS) cluster for scalability. The company must configure the Amazon EKS control plane with endpoint private access set to true and endpoint public access set to false to maintain security compliance. The company must also put the data plane in private subnets. However, the company has received error notifications because the node cannot join the cluster. Which solution will allow the node to join the cluster?",
+    "options": [
+      "A. Grant the required permission in AWS Identity and Access Management (IAM) to the AmazonEKSNodeRole IAM role.\nB. Create interface VPC endpoints to allow nodes to access the control plane.\nC. Recreate nodes in the public subnet. Restrict security groups for EC2 nodes.\nD. Allow outbound traffic in the security group of the nodes. "
+    ],
+    "explain": "Selected Answer: B By creating interface VPC endpoints  you can enable the necessary communication between the Amazon EKS control plane and the nodes in private subnets. This solution ensures that the control plane maintains endpoint private access (set to true) and endpoint public access (set to false) for security compliance.",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html"
+    ]
+  },
+  {
+    "_id": 67,
+    "question": "67 A company is migrating an on-premises application to AWS. The company wants to use Amazon Redshift as a solution. Which use cases are suitable for Amazon Redshift in this scenario? (Choose three.)",
+    "options": [
+      "A. Supporting data APIs to access data with traditional containerizedand event-driven applications\nB. Supporting client-side and server-side encryption\nC. Building analytics workloads during specified hours and when the application is not active\nD. Caching data to reduce the pressure on the backend database\nE. Scaling globally to support petabytes of data and tens of millions of requests per minute\nF. Creating a secondary replica of the cluster by using the AWS Management Console"
+    ],
+    "explain": "",
+    "answers": [
+      "2",
+      "3",
+      "5"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248464582057&usg=AOvVaw3HTaMDIUZl9YPFgfAbW9vH",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html&sa=D&source=apps-viewer-frontend&ust=1720248464582093&usg=AOvVaw1I2Y2DkEwglRfBBxA28qII",
+      "https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html"
+    ]
+  },
+  {
+    "_id": 66,
+    "question": "66 A company provides an API interface to customers so the customers can retrieve their financial information. Еhe company expects a larger number of requests during peak usage times of the year. The company requires the API to respond consistently with low latency to ensure customer satisfaction. The company needs to provide a compute host for the API. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Use an Application Load Balancer and Amazon Elastic Container Service (Amazon ECS).\nB. Use Amazon API Gateway and AWS Lambda functions with provisioned concurrency.\nC. Use an Application Load Balancer and an Amazon Elastic Kubernetes Service (Amazon EKS) cluster.\nD. Use Amazon API Gateway and AWS Lambda functions with reserved concurrency."
+    ],
+    "explain": "Selected Answer: B The company requires the API to respond consistently with low latency to ensure customer satisfaction especially during high peak periods, there is no mention of cost efficient. Hence provisioned concurrency is the best option. Provisioned concurrency is the number of pre-initialized execution environments you want to allocate to your function. These execution environments are prepared to respond immediately to incoming function requests. Configuring provisioned concurrency incurs charges to your AWS account.",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/lambda/latest/dg/provisioned-"
+    ]
+  },
+  {
+    "_id": 65,
+    "question": "65 A company wants to send all AWS Systems Manager Session Manager logs to an Amazon S3 bucket for archival purposes. Which solution will meet this requirement with the MOST operational efficiency?",
+    "options": [],
+    "explain": "",
+    "answers": [],
+    "resources": []
+  },
+  {
+    "_id": 65,
+    "question": "65 A company wants to send all AWS Systems Manager Session Manager logs to an Amazon S3 bucket for archival purposes. Which solution will meet this requirement with the MOST operational efficiency? ",
+    "options": [
+      "A. Enable S3 logging in the Systems Manager console. Choose an S3 bucket to send the session data to. \nB. Install the Amazon CloudWatch agent. Push all logs to a CloudWatch log group. Export the logs to an S3 bucket from the group for archival purposes. \nC. Create a Systems Manager document to upload all server logs to a central S3 bucket. Use Amazon EventBridge to run the Systems Manager document against all servers that are in the account daily. \nD. Install an Amazon CloudWatch agent. Push all logs to a CloudWatch log group. Create a CloudWatch logs subscription that pushes any incoming log events to an Amazon Kinesis Data Firehose delivery stream. Set Amazon S3 as the destination. "
+    ],
+    "explain": "Selected Answer: A option A does not involve CloudWatch  while option D does. Therefore  in terms of operational overhead  option A would generally have less complexity and operational overhead compared to option D. Option A simply enables S3 logging in the Systems Manager console  allowing you to directly send session logs to an S3 bucket. This approach is straightforward and requires minimal configuration. On the other hand  option D involves installing and configuring the Amazon CloudWatch agent  creating a CloudWatch log group  setting up a CloudWatch Logs subscription  and configuring an Amazon Kinesis Data Firehose delivery stream to store logs in an S3 bucket. This requires additional setup and management compared to option",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248465238953&usg=AOvVaw1_LRdFxPINgjzUKbNnp5QD\nhttps://www.google.com/url?q=https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html%23:~:text%3Dfor%2520a%2520function.-Provisioned%2520concurrency-%25E2%2580%2593%2520Provisioned%2520concurrency%2520is&sa=D&source=apps-viewer-frontend&ust=1720248465239017&usg=AOvVaw0nkSFi8dDiDrPEsNjo0Km\nhttps://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html#:~:text=for%20a%20function-Provisioned%20concurrency-%E2%80%93%20Provisioned%20concurrency%20\n"
+    ]
+  },
+  {
+    "_id": "64",
+    "question": "An application uses an Amazon RDS MySQL DB instance. The RDS database is becoming low on disk space. A solutions architect wants to increase the disk space without downtime. Which solution meets these requirements with the LEAST amount of effort?",
+    "options": [
+      "A. Enable storage autoscaling in RDS\nB. Increase the RDS database instance size\nC. Change the RDS database instance storage type to Provisioned IOPS\nD. Back up the RDS database increase the storage capacity restore the database and stop the previous"
+    ],
+    "explain": "",
+    "answers": [
+      "1"
+    ],
+    "resources": []
+  },
+  {
+    "_id": "",
+    "question": "",
+    "options": [
+      ""
+    ],
+    "explain": "",
+    "answers": [],
+    "resources": [
+      ""
+    ]
+  },
+  {
+    "_id": 63,
+    "question": "63 A consulting company provides professional services to customers worldwide. The company provides solutions and tools for customers to expedite gathering and analyzing data on AWS. The company needs to centrally manage and deploy a common set of solutions and tools for customers to use for self- service purposes. https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248466000198&usg=AOvVaw26bwNiqMyh2HiV70nb3XrY https://www.google.com/url?q=https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html&sa=D&source=apps-viewer-frontend&ust=1720248466000260&usg=AOvVaw2T965SYOMl9EFdbj68jjiO https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html https://www.google.com/url?q=https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/%23:~:text%3Dof%2520the%2520rest.-,RDS%2520Storage%2520Auto%2520Scaling,-continuously%2520monitors%2520actual&sa=D&source=apps-viewer-frontend&ust=1720248466000270&usg=AOvVaw3GjhqO3OivV5n7EcZoCG_h https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/#:~:text=of%20the%20rest.-,RDS%20Storage%20Auto%20Scaling,-continuously%20monitors%20actual 24 Which solution will meet these requirements?",
+    "options": [
+      "A. Create AWS CloudFormation templates for the customers.\nB. Create AWS Service Catalog products for the customers.\nC. Create AWS Systems Manager templates for the customers.\nD. Create AWS Config items for the customers. "
+    ],
+    "explain": "Selected Answer: B AWS Service Catalog lets you centrally manage your cloud resources to achieve governance at scale of your infrastructure as code (IaC) templates, written in CloudFormation or Terraform. With AWS Service Catalog, you can meet your compliance requirements while making sure your customers can quickly deploy the cloud resources they need.",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248466000198&usg=AOvVaw26bwNiqMyh2HiV70nb3XrY",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html&sa=D&source=apps-viewer-frontend&ust=1720248466000260&usg=AOvVaw2T965SYOMl9EFdbj68jjiO",
+      "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/%23:~:text%3Dof%2520the%2520rest.-,RDS%2520Storage%2520Auto%2520Scaling,-continuously%2520monitors%2520actual&sa=D&source=apps-viewer-frontend&ust=1720248466000270&usg=AOvVaw3GjhqO3OivV5n7EcZoCG_h",
+      "https://aws.amazon.com/about-aws/whats-new/2019/06/rds-storage-auto-scaling/#:~:text=of%20the%20rest.-,RDS%20Storage%20Auto%20Scaling,-continuously%20monitors%20actual",
+      "https://aws.amazon.com/servicecatalog/#:~:text=How%20it%20works-,AWS%20Service%20Catalog,-"
+    ]
+  },
+  {
+    "_id": "61",
+    "question": "61 The company is deploying a central inventory reporting application into a shared AWS account. The application must be able to read items from all the teams' DynamoDB tables. Which authentication option will meet these requirements MOST securely?",
+    "options": [
+      "A. Integrate DynamoDB with AWS Secrets Manager in the inventory application account. Configure the application to use the correct secret from Secrets Manager to authenticate and read the DynamoDB table. Schedule secret rotation for every 30 days.\nB. In every business account create an IAM user that has programmatic access. Configure the application to use the correct IAM user access key ID and secret access key to authenticate and read the DynamoDB table. Manually rotate IAM access keys every 30 days.\nC. In every business account create an IAM role named BU_ROLE with a policy that gives the role access to the DynamoDB table and a trust policy to trust a specific role in the inventory application account. In the inventory account create a role named APP_ROLE that allows access to the STS AssumeRole API operation. Configure the application to use APP_ROLE and assume the crossaccount role BU_ROLE to read the DynamoDB table.\nD. Integrate DynamoDB with AWS Certificate Manager (ACM). Generate identity certificates to authenticate DynamoDB. Configure the application to use the correct certificate to authenticate and read the DynamoDB table."
+    ],
+    "explain": " IAM Roles: IAM roles provide a secure way to grant permissions to entities within AWS. By creating an IAM role in each business account named BU_ROLE with the necessary permissions to access the DynamoDB table the access can be controlled at the IAM role level. Cross-Account Access: By configuring a trust policy in the BU_ROLE that trusts a specific role in the inventory application account (APP_ROLE) you establish a trusted relationship between the two accounts. Least Privilege: By creating a specific IAM role (BU_ROLE) in each business account and granting it access only to the required DynamoDB table you can ensure that each team's table is accessed with the least privilege principle. Security Token Service (STS): The use of STS AssumeRole API operation in the inventory application account allows the application to assume the cross-account role (BU_ROLE) in each business account.",
+    "answers": [
+      3
+    ],
+    "resources": []
+  },
+  {
+    "_id": "61",
+    "question": "61 The company is deploying a central inventory reporting application into a shared AWS account. The application must be able to read items from all the teams' DynamoDB tables. Which authentication option will meet these requirements MOST securely?",
+    "options": [
+      "A. Integrate DynamoDB with AWS Secrets Manager in the inventory application account. Configure the application to use the correct secret from Secrets Manager to authenticate and read the DynamoDB table. Schedule secret rotation for every 30 days.\nB. In every business account create an IAM user that has programmatic access. Configure the application to use the correct IAM user access key ID and secret access key to authenticate and read the DynamoDB table. Manually rotate IAM access keys every 30 days.\nC. In every business account create an IAM role named BU_ROLE with a policy that gives the role access to the DynamoDB table and a trust policy to trust a specific role in the inventory application account. In the inventory account create a role named APP_ROLE that allows access to the STS AssumeRole API operation. Configure the application to use APP_ROLE and assume the crossaccount role BU_ROLE to read the DynamoDB table.\nD. Integrate DynamoDB with AWS Certificate Manager (ACM). Generate identity certificates to authenticate DynamoDB. Configure the application to use the correct certificate to authenticate and read the DynamoDB table. \n\n"
+    ],
+    "explain": " IAM Roles: IAM roles provide a secure way to grant permissions to entities within AWS. By creating an IAM role in each business account named BU_ROLE with the necessary permissions to access the DynamoDB table the access can be controlled at the IAM role level. Cross-Account Access: By configuring a trust policy in the BU_ROLE that trusts a specific role in the inventory application account (APP_ROLE) you establish a trusted relationship between the two accounts. Least Privilege: By creating a specific IAM role (BU_ROLE) in each business account and granting it access only to the required DynamoDB table you can ensure that each team's table is accessed with the least privilege principle. Security Token Service (STS): The use of STS AssumeRole API operation in the inventory application account allows the application to assume the cross-account role (BU_ROLE) in each business account.",
+    "answers": [
+      "3"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 60,
+    "question": "60 A company runs container applications by using Amazon Elastic Kubernetes Service (Amazon EKS). The company's workload is not consistent throughout the day. The company wants Amazon EKS to scale in and out according to the workload. Which combination of steps will meet these requirements with the LEAST operational overhead? (Choose two.)",
+    "options": [
+      "A. Use an AWS Lambda function to resize the EKS cluster.\nB. Use the Kubernetes Metrics Server to activate horizontal pod autoscaling.\nC. Use the Kubernetes Cluster Autoscaler to manage the number of nodes in the cluster.\nD. Use Amazon API Gateway and connect it to Amazon EKS.\nE. Use AWS App Mesh to observe network activity. "
+    ],
+    "explain": "By combining the Kubernetes Cluster Autoscaler (option C) to manage the number of nodes in the cluster and enabling horizontal pod autoscaling (option B) with the Kubernetes Metrics Server, you can achieve automatic scaling of your EKS cluster and container applications based on workload demand. This approach minimizes operational overhead as it leverages built-in Kubernetes functionality and automation mechanisms. Kubernetes Metrics Server",
+    "answers": [
+      "2",
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/eks/latest/userguide/metrics-server.html",
+      "https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html",
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248467185264&usg=AOvVaw168yGoDepkI1tawFsHDVKG",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/eks/latest/userguide/metrics-server.html&sa=D&source=apps-viewer-frontend&ust=1720248467185304&usg=AOvVaw2mr_018R3cyVqDBAUV1CRX",
+      "https://docs.aws.amazon.com/eks/latest/userguide/metrics-server.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html&sa=D&source=apps-viewer-frontend&ust=1720248467185317&usg=AOvVaw0A3Dai3gbQ0zUmS4UFEx5B",
+      "https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html",
+      "https://github.com/kubernetes/autoscaler/blob/master/cluster-"
+    ]
+  },
+  {
+    "_id": 59,
+    "question": "59 A company runs a microservice-based serverless web application. The application must be able to retrieve data from multiple Amazon DynamoDB tables A solutions architect needs to give the application the ability to retrieve the data with no impact on the baseline performance of the application. Which solution will meet these requirements in the MOST operationally efficient way?",
+    "options": [
+      "A. AWS AppSync pipeline resolvers",
+      "B. Amazon CloudFront with Lambda@Edge functions",
+      "C. Edge-optimized Amazon API Gateway with AWS Lambda functions",
+      "D. Amazon Athena Federated Query with a DynamoDB connector"
+    ],
+    "explain": "",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/athena/latest/ug/connect-to-a-data-source.html"
+    ]
+  },
+  {
+    "_id": 58,
+    "question": "58 A company wants to analyze and troubleshoot Access Denied errors and Unauthorized errors that are related to IAM permissions. The company has AWS CloudTrail turned on. Which solution will meet these requirements with the LEAST effort?",
+    "options": [
+      "A. Use AWS Glue and write custom scripts to query CloudTrail logs for the errors.",
+      "B. Use AWS Batch and write custom scripts to query CloudTrail logs for the errors.",
+      "C. Search CloudTrail logs with Amazon Athena queries to identify the errors.",
+      "D. Search CloudTrail logs with Amazon QuickSight. Create a dashboard to identify the errors. IAM and CloudTrail"
+    ],
+    "explain": "",
+    "answers": [
+      "3"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-",
+      "https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html#tips-for-querying-cloudtrail-"
+    ]
+  },
+  {
+    "_id": 57,
+    "question": "57 A company wants to add its existing AWS usage cost to its operation cost dashboard. A solutions architect needs to recommend a solution that will give the company access to its usage cost programmatically. The company must be able to access cost data for the current year and forecast costs for the next 12 months. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "A. Access usage cost-related data by using the AWS Cost Explorer API with pagination.\nB. Access usage cost-related data by using downloadable AWS Cost Explorer report .csv files.\nC. Configure AWS Budgets actions to send usage cost data to the company through FTP.\nD. Create AWS Budgets reports for usage cost data. Send the data to the company through SMTP. "
+    ],
+    "explain": "From AWS Documentation*: \"You can view your costs and usage using the Cost Explorer user interface free of charge. You can also access your data programmatically using the Cost Explorer API. Each paginated API request incurs a charge of $0.01. You can't disable Cost Explorer after you enable it.\"  Source: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248467792705&usg=AOvVaw2fdL47YZnZd8kdkI7vyAJ8",
+      "https://www.google.com/url?q=https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md&sa=D&source=apps-viewer-frontend&ust=1720248467792755&usg=AOvVaw0hYLUdvIX4GQerNzD9FIY9",
+      "https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/athena/latest/ug/connect-to-a-data-source.html&sa=D&source=apps-viewer-frontend&ust=1720248467792769&usg=AOvVaw2mr-J_54ad_oBtj1atFmK8",
+      "https://docs.aws.amazon.com/athena/latest/ug/connect-to-a-data-source.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html%23stscloudtrailexample-assumerole&sa=D&source=apps-viewer-frontend&ust=1720248467792782&usg=AOvVaw0qe4hV-vAuGxEeAywVYhVz",
+      "https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html#stscloudtrailexample-assumerole",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html%23tips-for-querying-cloudtrail-logs%23tips-for-querying-cloudtrail-logs&sa=D&source=apps-viewer-frontend&ust=1720248467792797&usg=AOvVaw2YW27HoMegUokwggdw0u_f",
+      "https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html#tips-for-querying-cloudtrail-logs#tips-for-querying-cloudtrail-logs",
+      "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html",
+      "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cost-"
+    ]
+  },
+  {
+    "_id": 56,
+    "question": "56 A solutions architect is reviewing the resilience of an application. The solutions architect notices that a database administrator recently failed over the application's Amazon Aurora PostgreSQL database writer instance as part of a scaling exercise. The failover resulted in 3 minutes of downtime for the application. Which solution will reduce the downtime for scaling exercises with the LEAST operational overhead?",
+    "options": [
+      "A. Create more Aurora PostgreSQL read replicas in the cluster to handle the load during failover.\nB. Set up a secondary Aurora PostgreSQL cluster in the same AWS Region. During failover update the application to use the secondary cluster's writer endpoint.\nC. Create an Amazon ElastiCache for Memcached cluster to handle the load during failover.\nD. Set up an Amazon RDS proxy for the database. Update the application to use the proxy endpoint."
+    ],
+    "explain": "One of the benefits of Amazon RDS Proxy is that it can improve application recovery time after database failovers. While RDS Proxy supports both MySQL as well as PostgreSQL engines, in this post, we will use a MySQL test workload to demonstrate how RDS Proxy reduces client recovery time after failover by up to 79% for Amazon Aurora MySQL and by up to 32% for Amazon RDS for MySQL.",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://aws.amazon.com/blogs/database/improving-application-availability-with-amazon-rds-proxy/",
+      "https://aws.amazon.com/rds/proxy/faqs/"
+    ]
+  },
+  {
+    "_id": 55,
+    "question": "55 A company has a regional subscription-based streaming service that runs in a single AWS Region. The architecture consists of web servers and application servers on Amazon EC2 instances. The EC2 instances are in Auto Scaling groups behind Elastic Load Balancers. The architecture includes an Amazon Aurora global database cluster that extends across multiple Availability Zones. The company wants to expand globally and to ensure that its application has minimal downtime. Which solution will provide the MOST fault tolerance?",
+    "options": [
+      "A. Extend the Auto Scaling groups for the web tier and the application tier to deploy instances in Availability Zones in a second Region. Use an Aurora global database to deploy the database in the primary Region and the second Region. Use Amazon Route 53 health checks with a failover routing policy to the second Region.\nB. Deploy the web tier and the application tier to a second Region. Add an Aurora PostgreSQL cross- Region Aurora Replica in the second Region. Use Amazon Route 53 health checks with a failover routing policy to the second Region. Promote the secondary to primary as needed.\nC. Deploy the web tier and the application tier to a second Region. Create an Aurora PostgreSQL database in the second Region. Use AWS Database Migration Service (AWS DMS) to replicate the primary database to the second Region. Use Amazon Route 53 health checks with a failover routing policy to the second Region.\nD. Deploy the web tier and the application tier to a second Region. Use an Amazon Aurora global database to deploy the database in the primary Region and the second Region. Use Amazon Route 53 health checks with a failover routing policy to the second Region. Promote the secondary to primary as needed.\n\n\n"
+    ],
+    "explain": "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248468436341&usg=AOvVaw32bwKWiCVkQw0VqHI9Nldy https://www.google.com/url?q=https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html&sa=D&source=apps-viewer-frontend&ust=1720248468436384&usg=AOvVaw1bghL-XSc2GH44xqrqqd2z https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html https://www.google.com/url?q=https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cost-explorer/interfaces/costexplorerpaginationconfiguration.html&sa=D&source=apps-viewer-frontend&ust=1720248468436398&usg=AOvVaw1RuhC_uQkwpT6qBQloKVUq https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cost-explorer/interfaces/costexplorerpaginationconfiguration.html https://www.google.com/url?q=https://aws.amazon.com/blogs/database/improving-application-availability-with-amazon-rds-proxy/&sa=D&source=apps-viewer-frontend&ust=1720248468436411&usg=AOvVaw1hJb2dY7PMKjWwYjYLmO_- https://aws.amazon.com/blogs/database/improving-application-availability-with-amazon-rds-proxy/ https://www.google.com/url?q=https://aws.amazon.com/rds/proxy/faqs/&sa=D&source=apps-viewer-frontend&ust=1720248468436423&usg=AOvVaw2KTKEUi4Ower5Y-rLhBoI6 https://aws.amazon.com/rds/proxy/faqs/ 28 B&C are discarted. The answer is between A and",
+    "answers": [
+      "4"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248468436341&usg=AOvVaw32bwKWiCVkQw0VqHI9Nldy",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html&sa=D&source=apps-viewer-frontend&ust=1720248468436384&usg=AOvVaw1bghL-XSc2GH44xqrqqd2z",
+      "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html",
+      "https://www.google.com/url?q=https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cost-explorer/interfaces/costexplorerpaginationconfiguration.html&sa=D&source=apps-viewer-frontend&ust=1720248468436398&usg=AOvVaw1RuhC_uQkwpT6qBQloKVUq",
+      "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cost-explorer/interfaces/costexplorerpaginationconfiguration.html",
+      "https://www.google.com/url?q=https://aws.amazon.com/blogs/database/improving-application-availability-with-amazon-rds-proxy/&sa=D&source=apps-viewer-frontend&ust=1720248468436411&usg=AOvVaw1hJb2dY7PMKjWwYjYLmO_-",
+      "https://aws.amazon.com/blogs/database/improving-application-availability-with-amazon-rds-proxy/",
+      "https://www.google.com/url?q=https://aws.amazon.com/rds/proxy/faqs/&sa=D&source=apps-viewer-frontend&ust=1720248468436423&usg=AOvVaw2KTKEUi4Ower5Y-rLhBoI6",
+      "https://aws.amazon.com/rds/proxy/faqs/"
+    ]
+  },
+  {
+    "_id": 54,
+    "question": "54 A data analytics company wants to migrate its batch processing system to AWS. The company receives thousands of small data files periodically during the day through FTP. An on-premises batch job processes the data files overnight. However, the batch job takes hours to finish running. The company wants the AWS solution to process incoming data files as soon as possible with minimal changes to the FTP clients that send the files. The solution must delete the incoming data files after the files have been processed successfully. Processing for each file needs to take 3-8 minutes. Which solution will meet these requirements in the MOST operationally efficient way?",
+    "options": [
+      "A. Use an Amazon EC2 instance that runs an FTP server to store incoming files as objects in Amazon S3 Glacier Flexible Retrieval. Configure a job queue in AWS Batch. Use Amazon EventBridge rules to invoke the job to process the objects nightly from S3 Glacier Flexible Retrieval. Delete the objects after the job has processed the objects.\nB. Use an Amazon EC2 instance that runs an FTP server to store incoming files on an Amazon Elastic Block Store (Amazon EBS) volume. Configure a job queue in AWS Batch. Use Amazon EventBridge rules to invoke the job to process the files nightly from the EBS volume. Delete the files after the job has processed the files.\nC. Use AWS Transfer Family to create an FTP server to store incoming files on an Amazon Elastic Block Store (Amazon EBS) volume. Configure a job queue in AWS Batch. Use an Amazon S3 event notification when each file arrives to invoke the job in AWS Batch. Delete the files after the job has processed the files.\nD. Use AWS Transfer Family to create an FTP server to store incoming files in Amazon S3 Standard. Create an AWS Lambda function to process the files and to delete the files after they are processed. Use an S3 event notification to invoke the Lambda function when the files arrive."
+    ],
+    "explain": "Process incoming data files with minimal changes to the FTP clients that send the files = AWS Transfer Family. Process incoming data files as soon as possible = S3 event notification. Processing for each file needs to take 3-8 minutes = AWS Lambda function. Delete file after processing = AWS Lambda function.",
+    "answers": [
+      "4"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 53,
+    "question": "53 A company is migrating its workloads to AWS. The company has transactional and sensitive data in its databases. The company wants to use AWS Cloud solutions to increase security and reduce operational overhead for the databases. Which solution will meet these requirements?",
+    "options": [
+      "A. Migrate the databases to Amazon EC2. Use an AWS Key Management Service (AWS KMS) AWS managed key for encryption.\nB. Migrate the databases to Amazon RDS Configure encryption at rest.\nC. Migrate the data to Amazon S3 Use Amazon Macie for data security and protection\nD. Migrate the database to Amazon RDS. Use Amazon CloudWatch Logs for data security and protection."
+    ],
+    "explain": "Option C suggests migrating the data to Amazon S3 and using Amazon Macie for data security and protection. While Amazon Macie provides advanced security features for data in S3, it may not be directly applicable or optimized for databases, especially for transactional and sensitive data. Amazon RDS provides a more suitable environment for managing databases.",
+    "answers": [
+      "2"
+    ],
+    "resources": [
+      "https://www.google.com/url?q=https://www.youtube.com/channel/UC1w7rLIVgDgMdI_ktBwAqww&sa=D&source=apps-viewer-frontend&ust=1720248469068009&usg=AOvVaw0ue1eBv8_q7s-cvlMB0osZ"
+    ]
+  },
+  {
+    "_id": 52,
+    "question": "52 A company has an online gaming application that has TCP and UDP multiplayer gaming capabilities. The company uses Amazon Route 53 to point the application traffic to multiple Network Load Balancers (NLBs) in different AWS Regions. The company needs to improve application performance and decrease latency for the online game in preparation for user growth. Which solution will meet these requirements?",
+    "options": [
+      "A. Add an Amazon CloudFront distribution in front of the NLBs. Increase the Cache-Control max-age parameter.\nB. Replace the NLBs with Application Load Balancers (ALBs). Configure Route 53 to use latency-based routing.\nC. Add AWS Global Accelerator in front of the NLBs. Configure a Global Accelerator endpoint to use the correct listener ports.\nD. Add an Amazon API Gateway endpoint behind the NLBs. Enable API caching. Override method caching for the different stages."
+    ],
+    "explain": "TCP ,UDP, Gaming = global accelerator and Network Load Balancer",
+    "answers": [
+      "1"
+    ],
+    "resources": []
+  },
+  {
+    "_id": 51,
+    "question": "51 A company needs to integrate with a third-party data feed. The data feed sends a webhook to notify an external service when new data is ready for consumption. A developer wrote an AWS Lambda function to retrieve data when the company receives a webhook callback. The developer must make the Lambda function available for the third party to call. Which solution will meet these requirements with the MOST operational efficiency?",
+    "options": [
+      "A. Create a function URL for the Lambda function. Provide the Lambda function URL to the third party for the webhook.\nB. Deploy an Application Load Balancer (ALB) in front of the Lambda function. Provide the ALB URL to the third party for the webhook.\nC. Create an Amazon Simple Notification Service (Amazon SNS) topic. Attach the topic to the Lambda function. Provide the public hostname of the SNS topic to the third party for the webhook.\nD. Create an Amazon Simple Queue Service (Amazon SQS) queue. Attach the queue to the Lambda function. Provide the public hostname of the SQS queue to the third party for the webhook."
+    ],
+    "explain": "Keyword \"Lambda function\" and \"webhook\". See in resources:",
+    "answers": [
+      "1"
+    ],
+    "resources": [
+      "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#create-stripe-cfn-stack"
+    ]
+  }
+]

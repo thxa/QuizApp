@@ -1,0 +1,21 @@
+.json-editor {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.json-editor label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.json-editor input, .json-editor textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
