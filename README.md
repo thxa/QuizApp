@@ -3,12 +3,12 @@ The Quiz App is a platform designed to test your knowledge on specific topics or
 
 ## Features and Versions
 
-For a detailed view of the features planned for each version of the Quiz Application, please refer to the Trello board at the following link: [Quiz App Project Trello Board](https://trello.com/b/TNlvvBdM/quiz-app-project).
+For a detailed view of the features planned for each version of the Quiz Application, please refer to the Trello board at the following link: [Quiz App Project Trello Board]([https://trello.com/b/TNlvvBdM/quiz-app-project](https://trello.com/invite/b/668775dfd710332d40031b9d/ATTI35f7ae17da3d8fb00bb3d57b9e003539CFB5809B/quiz-app-project)).
 
 This board provides a comprehensive overview of the features, milestones, and updates planned for each version of the application.
 
 
-<--
+<!--
 **Zero-Based Versioning (0.x.x):**
 - **Use Case:** For early development. Not yet stable or production-ready.
 - **Example:** Version `0.1.0` to `0.2.0` for initial feedback and feature testing.
